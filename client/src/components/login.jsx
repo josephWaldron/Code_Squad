@@ -38,8 +38,6 @@ function Login() {
       setErrorMessage(error.response.data);
     }
   };
-  
-  
 
   return (
     <div className="login-container">
@@ -47,7 +45,7 @@ function Login() {
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label className="login-label" htmlFor="email">
-            Email address<br></br>
+            Email address:<br></br>
           </label>
           <input
             type="email"
