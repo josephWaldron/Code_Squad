@@ -1,0 +1,22 @@
+.text-style-box {
+  color: white;
+  background-color: #01579b;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.description-style {
+  color: white;
+}
+
+.lessons {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-right: 5vw;
+  margin-top: 10px;
+  margin-left: 5vw;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

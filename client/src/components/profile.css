@@ -1,0 +1,48 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.profile-header {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.profile-header h1 {
+  font-size: 2rem;
+}
+
+.profile-field {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.profile-label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.profile-value {
+  flex: 1;
+}
+
+.profile-button {
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: #01579b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.profile-button:hover {
+  background-color: #29b6f6;
+}
