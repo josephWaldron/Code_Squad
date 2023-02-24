@@ -7,9 +7,13 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(
-  "mongodb+srv://waldrojo:joe54543@cluster0.j7rukal.mongodb.net/codeSquad?retryWrites=true&w=majority"
-);
+// mongoose.connect(
+//   "mongodb+srv://waldrojo:joe54543@cluster0.j7rukal.mongodb.net/codeSquad?retryWrites=true&w=majority"
+// );
+const connectionData = require("./connect.json");
+
+mongoose.connect(connectionData.mongodb_connection.uri);
+
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
