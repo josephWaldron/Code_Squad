@@ -31,10 +31,6 @@ const userSchema = new mongoose.Schema({
     type: Array,
     default: [],
   },
-  totalStatus: {
-    type: Number,
-    default: 0,
-  },
   totalJavaStatus: {
     type: Number,
     default: 0,

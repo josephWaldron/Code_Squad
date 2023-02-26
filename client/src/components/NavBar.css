@@ -1,5 +1,5 @@
-.navbar {
-  background-color: #212121;
+.navbar1 {
+  background-color: #242526;
   height: 100px;
   display: flex;
   align-items: center;
@@ -18,25 +18,25 @@
   margin-right: 10px;
 }
 
-.navbar-nav {
+.navbar-nav1 {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-item {
+.item {
   margin: 0 10px;
 }
 
-.nav-link {
+.linker {
   color: #fff;
   text-decoration: none;
   font-size: calc(20px + 1vmin);
   margin-left: calc(60px + 1vmin);
 }
 
-.nav-link:hover {
+.linker:hover {
   color: #ddd;
 }
 
@@ -44,6 +44,6 @@
   display: flex;
 }
 
-.navbar-right .nav-link {
+.navbar-right .linker {
   margin-left: 10px;
 }

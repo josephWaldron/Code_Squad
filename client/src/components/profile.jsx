@@ -62,10 +62,6 @@ const Profile = () => {
           <div className="profile-label">Expert:</div>
           <div className="profile-value">{user.expert ? "Yes" : "No"}</div>
         </div>
-        <div className="profile-field">
-          <div className="profile-label">Total Status:</div>
-          <div className="profile-value">{user.totalStatus}</div>
-        </div>
         <button className="profile-button" onClick={handleLogout}>
           Logout
         </button>

@@ -4,34 +4,34 @@ import Cookies from "js-cookie";
 const NavBar = () => {
   const isLoggedIn = Cookies.get("userId");
   return (
-    <nav className="navbar">
+    <nav className="navbar1">
       <div className="navbar-logo">
         <img src="/logo.png" alt="Logo" />
       </div>
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link" href="/">
+      <ul className="navbar-nav1">
+        <li className="item">
+          <a className="linker" href="/">
             Home
           </a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/courses">
+        <li className="item">
+          <a className="linker" href="/courses">
             Courses
           </a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/about">
+        <li className="item">
+          <a className="linker" href="/about">
             About / Contact
           </a>
         </li>
       </ul>
       <div className="navbar-right">
         {isLoggedIn ? (
-          <a className="nav-link" href="/profile">
+          <a className="linker" href="/profile">
             Profile
           </a>
         ) : (
-          <a className="nav-link" href="/login">
+          <a className="linker" href="/login">
             Login
           </a>
         )}

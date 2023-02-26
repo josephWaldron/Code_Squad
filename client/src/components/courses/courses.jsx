@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
 import "./courses.css";
-import axios from "axios";
-import Cookies from "js-cookie";
+import Progress from "../progress";
 const coursesData = [
   {
     name: "Java",
@@ -34,35 +32,21 @@ const coursesData = [
 ];
 
 const Courses = () => {
-  const userId = Cookies.get("userId");
-  const justLoggedIn = Cookies.get("login");
-  const [user, setUser] = useState(null); // set up a user state to hold the data
-
-  useEffect(() => {
-    const getUser = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:3001/user/${userId}`
-        );
-        setUser(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    getUser();
-  }, [userId]);
   return (
     <>
       <div className="course">
         <h1 className="text-style">
           Explore our current and upcoming courses!
         </h1>
+        <h2 className="text-style">Your Total progress</h2>
+        <br />
+        <Progress />
       </div>
       <div className="courses-container">
         {coursesData.map((course) => (
           <div key={course.name}>
             <h3 className="text-style">{course.name}</h3>
-            <img src={course.imageURL} className="courseIMG" />
+            <img src={course.imageURL} className="courseIMG" alt="" />
             <br></br>
             {course.note === "Coming Soon!" ? ( // if the note is "Coming Soon!"
               <button className="text-style"> {course.buttonText} </button> //add a not yet available page

@@ -1,13 +1,14 @@
 .text-style {
   color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .text-style-RED {
   color: red;
 }
 .course {
-  display: flex; /* render elements in a row    */
-  justify-content: space-evenly; /* evenly space items          */
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .courseIMG {
