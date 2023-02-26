@@ -7,6 +7,7 @@ import SignUp from "./components/create-account";
 import Profile from "./components/profile";
 import Courses from "./components/courses/courses";
 import JavaLessons from "./components/courses/javaCourse/javaModules";
+import About from "./components/about";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -38,6 +39,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/java" element={<JavaLessons />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </>
   );
