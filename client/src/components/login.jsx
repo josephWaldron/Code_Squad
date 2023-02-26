@@ -7,7 +7,6 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -27,11 +26,10 @@ function Login() {
       });
 
       console.log(response.data);
-      setIsLoggedIn(true);
-      localStorage.setItem("isLoggedIn", "true"); // set the isLoggedIn item in localStorage
-      Cookies.set("userId", response.data.userId, { expires: 0.5 });
+
+      Cookies.set("userId", response.data.userId, { expires: 1 });
       //create a coookie that lasts for 1 second
-      Cookies.set("login", "true", { expires: 0.00001 });
+      Cookies.set("login", "true", { expires: 0.0001 });
 
       window.location.href = "/profile";
     } catch (error) {

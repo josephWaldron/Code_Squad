@@ -1,6 +1,8 @@
 import React from "react";
 import "./NavBar.css";
-const NavBar = (props) => {
+import Cookies from "js-cookie";
+const NavBar = () => {
+  const isLoggedIn = Cookies.get("userId");
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -24,7 +26,7 @@ const NavBar = (props) => {
         </li>
       </ul>
       <div className="navbar-right">
-        {props.isLoggedIn ? (
+        {isLoggedIn ? (
           <a className="nav-link" href="/profile">
             Profile
           </a>

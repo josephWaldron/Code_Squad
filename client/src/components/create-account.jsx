@@ -37,7 +37,7 @@ const SignUp = () => {
       setSuccessMessage("Account created successfully!");
       // do something with successful login, such as redirecting to dashboard
       //redirect to lgoin page
-      window.location.href = "/login";
+      window.location.href = "/profile";
     } catch (error) {
       if (error.response.status === 409) {
         setErrorMessage("Email already exists. Please try a different one.");

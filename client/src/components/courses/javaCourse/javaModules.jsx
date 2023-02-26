@@ -22,7 +22,7 @@ const data = [
 function JavaLessons() {
   const [user, setUser] = useState(null);
   const userId = Cookies.get("userId");
-  const justLoggedIn = Cookies.get("login");
+  //const justLoggedIn = Cookies.get("login");
 
   //get user from server
   useEffect(() => {
@@ -44,6 +44,7 @@ function JavaLessons() {
   }
 
   //check the users progress for java
+
   //if the user has completed a lesson, change the status to complete
   //if the user has not completed a lesson, change the status to incomplete
   //if the user has not completed a previous lesson, disable the button
@@ -53,6 +54,8 @@ function JavaLessons() {
       {data.map((lesson) => {
         return (
           <div key={lesson.id} className="lessons">
+            
+            
             <h2 className="text-style-box">{lesson.name}</h2>
             <h3 className="description-style">{lesson.description}</h3>
             <button

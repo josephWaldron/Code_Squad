@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./courses.css";
+import axios from "axios";
+import Cookies from "js-cookie";
 const coursesData = [
   {
     name: "Java",
@@ -32,6 +34,23 @@ const coursesData = [
 ];
 
 const Courses = () => {
+  const userId = Cookies.get("userId");
+  const justLoggedIn = Cookies.get("login");
+  const [user, setUser] = useState(null); // set up a user state to hold the data
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:3001/user/${userId}`
+        );
+        setUser(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    getUser();
+  }, [userId]);
   return (
     <>
       <div className="course">

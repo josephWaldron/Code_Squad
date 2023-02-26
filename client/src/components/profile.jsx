@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import "./profile.css"; // import the CSS file
 import LoginSuccessful from "./login-sucess";
+import { useEffect, useState } from "react";
 
 const Profile = () => {
-  const [user, setUser] = useState(null);
   const userId = Cookies.get("userId");
   const justLoggedIn = Cookies.get("login");
-
-  //get user from server
+  const [user, setUser] = useState(null); // set up a user state to hold the data
   useEffect(() => {
     const getUser = async () => {
       try {
@@ -21,12 +20,11 @@ const Profile = () => {
         console.error(error);
       }
     };
-    getUser();
+    if (userId !== undefined) getUser();
   }, [userId]);
 
   const handleLogout = () => {
     Cookies.remove("userId");
-    localStorage.setItem("isLoggedIn", "false"); // set the isLoggedIn item in localStorage
     //go back to home page
     //toDo create a
     window.location.href = "/";
@@ -68,14 +66,6 @@ const Profile = () => {
           <div className="profile-label">Total Status:</div>
           <div className="profile-value">{user.totalStatus}</div>
         </div>
-        <div className="profile-field">
-          <div className="profile-label">Module Status:</div>
-          <div className="profile-value">{user.moduleStatus}</div>
-        </div>
-        <div className="profile-field">
-          <div className="profile-label">Lesson Status:</div>
-          <div className="profile-value">{user.lessonStatus}</div>
-        </div>
         <button className="profile-button" onClick={handleLogout}>
           Logout
         </button>
@@ -110,14 +100,6 @@ const Profile = () => {
         <div className="profile-field">
           <div className="profile-label">Total Status:</div>
           <div className="profile-value">{user.totalStatus}</div>
-        </div>
-        <div className="profile-field">
-          <div className="profile-label">Module Status:</div>
-          <div className="profile-value">{user.moduleStatus}</div>
-        </div>
-        <div className="profile-field">
-          <div className="profile-label">Lesson Status:</div>
-          <div className="profile-value">{user.lessonStatus}</div>
         </div>
         <button className="profile-button" onClick={handleLogout}>
           Logout
