@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import "./javaModules.css";
+import JavaProgress from "./javaProgress";
 
 const data = [
   {
@@ -10,6 +11,7 @@ const data = [
     description: "Learn the basics of Java",
     url: "lesson1",
     status: "incomplete",
+    button: "locked",
   },
   {
     id: 2,
@@ -17,56 +19,71 @@ const data = [
     description: "Learn about Java data types",
     url: "lesson2",
     status: "incomplete",
+    button: "locked",
   },
 ];
 function JavaLessons() {
-  const [user, setUser] = useState(null);
   const userId = Cookies.get("userId");
-  //const justLoggedIn = Cookies.get("login");
+  const [totalJavaStatus, setTotalJavaStatus] = useState(null);
+  const [user, setUser] = useState(null); // set up a user state to hold the data
 
-  //get user from server
   useEffect(() => {
     const getUser = async () => {
       try {
         const response = await axios.get(
           `http://localhost:3001/user/${userId}`
         );
-        setUser(response.data);
+        setTotalJavaStatus(response.data.totalJavaStatus);
+        setUser(response.data); // set the user state to the data
       } catch (error) {
         console.error(error);
       }
     };
-    getUser();
+    if (userId !== undefined) getUser();
   }, [userId]);
 
   if (!user) {
     return <div>Please log in first</div>;
   }
 
-  //check the users progress for java
+  //loop through the data array
+  for (let i = 0; i < totalJavaStatus; i++) {
+    data[i].status = "complete";
+    data[i].button = "Get Started";
+  }
+  const handleButton = (args) => {
+    if (args.status === "complete") {
+      window.location.href = `java/${args.url}`;
+    } else {
+      alert("Please complete the previous lesson first");
+    }
+  };
 
-  //if the user has completed a lesson, change the status to complete
-  //if the user has not completed a lesson, change the status to incomplete
   //if the user has not completed a previous lesson, disable the button
 
   return (
-    <div>
-      {data.map((lesson) => {
-        return (
-          <div key={lesson.id} className="lessons">
-            
-            
-            <h2 className="text-style-box">{lesson.name}</h2>
-            <h3 className="description-style">{lesson.description}</h3>
-            <button
-              onClick={() => (window.location.href = `java/${lesson.url}`)}
-            >
-              Get Started
-            </button>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div class="container">
+        <JavaProgress />
+      </div>
+      <div>
+        {data.map((lesson) => {
+          return (
+            <div key={lesson.id} className="lessons">
+              <h2 className={lesson.status}>{lesson.name}</h2>
+              <h3 className="description-style">{lesson.description}</h3>
+              <button
+                className={lesson.status}
+                onClick={() => handleButton(lesson)}
+              >
+                {lesson.button}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
+
 export default JavaLessons;

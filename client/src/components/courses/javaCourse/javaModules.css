@@ -1,6 +1,6 @@
-.text-style-box {
+.incomplete {
   color: white;
-  background-color: #01579b;
+  background-color: #9b0101;
   padding: 20px;
   text-align: center;
   font-size: 30px;
@@ -19,4 +19,12 @@
   margin-left: 5vw;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.complete {
+  color: white;
+  background-color: #0e9b01;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
 }

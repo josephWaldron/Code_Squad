@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 import "./profile.css"; // import the CSS file
 import LoginSuccessful from "./login-sucess";
 import { useEffect, useState } from "react";
+import Progress from "./progress";
 
 const Profile = () => {
   const userId = Cookies.get("userId");
@@ -41,6 +42,8 @@ const Profile = () => {
         <LoginSuccessful />
         <div className="profile-header">
           <h1>Profile</h1>
+          <h1>Progress</h1>
+          <Progress />
         </div>
         <div className="profile-field">
           <div className="profile-label">First Name:</div>
@@ -69,37 +72,39 @@ const Profile = () => {
     );
   } else
     return (
-      <div className="profile-container">
-        <div className="profile-header">
-          <h1>Profile</h1>
+      <div>
+        <h1>Progress</h1>
+        <Progress />
+        <br />
+        <div className="profile-container">
+          <div className="profile-header">
+            <h1>Profile</h1>
+          </div>
+          <div className="profile-field">
+            <div className="profile-label">First Name:</div>
+            <div className="profile-value">{user.firstName}</div>
+          </div>
+          <div className="profile-field">
+            <div className="profile-label">Last Name:</div>
+            <div className="profile-value">{user.lastName}</div>
+          </div>
+          <div className="profile-field">
+            <div className="profile-label">Email:</div>
+            <div className="profile-value">{user.email}</div>
+          </div>
+          <div className="profile-field">
+            <div className="profile-label">Picture Path:</div>
+            <div className="profile-value">{user.picturePath}</div>
+          </div>
+          <div className="profile-field">
+            <div className="profile-label">Expert:</div>
+            <div className="profile-value">{user.expert ? "Yes" : "No"}</div>
+          </div>
+
+          <button className="profile-button" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
-        <div className="profile-field">
-          <div className="profile-label">First Name:</div>
-          <div className="profile-value">{user.firstName}</div>
-        </div>
-        <div className="profile-field">
-          <div className="profile-label">Last Name:</div>
-          <div className="profile-value">{user.lastName}</div>
-        </div>
-        <div className="profile-field">
-          <div className="profile-label">Email:</div>
-          <div className="profile-value">{user.email}</div>
-        </div>
-        <div className="profile-field">
-          <div className="profile-label">Picture Path:</div>
-          <div className="profile-value">{user.picturePath}</div>
-        </div>
-        <div className="profile-field">
-          <div className="profile-label">Expert:</div>
-          <div className="profile-value">{user.expert ? "Yes" : "No"}</div>
-        </div>
-        <div className="profile-field">
-          <div className="profile-label">Total Status:</div>
-          <div className="profile-value">{user.totalStatus}</div>
-        </div>
-        <button className="profile-button" onClick={handleLogout}>
-          Logout
-        </button>
       </div>
     );
 };
