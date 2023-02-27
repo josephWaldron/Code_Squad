@@ -8,46 +8,44 @@ import "../../lessons.css";
 const questions = [
   //update this
   {
-    lesson: 1,
-    name: "Java basic background",
+    lessonId: 1, //lesson number for changing the status
     id: 1,
     codeBlock: "",
     language: "java",
     question: "Which of the following values can a boolean value contain?",
     answers: [
-      "Only True",
-      "Only False",
-      "Both True and False",
-      "Any integer value",
+      { id: 0, text: "Only True", isCorrect: false },
+      { id: 1, text: "Only False", isCorrect: false },
+      { id: 2, text: "Both True and False", isCorrect: true },
+      { id: 3, text: "Any integer value", isCorrect: false },
     ],
-    correct: 2, //correct answer is the index of the correct answer in the answers array
-    //THIS ONE CAN NOT USE A CODE BLOCK
   },
   {
-    //question with a code block
-    lesson: 1,
-    name: "Java basic background",
+    //question with a code block in question
+    lessonId: 1, //lesson number
     id: 2,
     codeBlock: 'char x = "a";', //code block to display for the question
     language: "java", //language of the code block
     question: "Which part of the code is incorrect?",
     answers: [
-      "char needs to be in single quotes",
-      "Missing semicolon",
-      "None of the above",
+      { id: 0, text: "char needs to be in single quotes", isCorrect: true },
+      { id: 1, text: "Missing semicolon", isCorrect: false },
+      { id: 2, text: "None of the above", isCorrect: false },
     ],
-    correct: 0, //correct answer is the index of the correct answer in the answers array
   },
   {
     //question with code blocks for answers
-    lesson: 1,
-    name: "Java basic background",
+    lessonId: 1, //lesson number
     id: 3,
     codeBlock: "ANSWER",
     language: "java",
     question: "How to initialize an integer variable?",
-    answers: ["int x = s;", "int x = 10;", "int x = 10.5;", "int x = 10.5f;"],
-    correct: 1,
+    answers: [
+      { id: 0, text: "int x = 10;", isCorrect: true },
+      { id: 1, text: "int x = 10.5;", isCorrect: false },
+      { id: 2, text: "int x = 10.5f;", isCorrect: false },
+      { id: 3, text: "int x = 10.5d;", isCorrect: false },
+    ],
   },
 ];
 
@@ -168,7 +166,7 @@ function JavaLesson1() {
           <h1>Questions</h1>
           <div id="questions">
             {/* display the question one at a time and check if the answer is correct */}
-            <Questions question={questions} />
+            <Questions questionArray={questions} />
           </div>
         </div>
       </div>
