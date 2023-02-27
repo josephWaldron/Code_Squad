@@ -97,6 +97,7 @@ function JavaLesson1() {
           <h2>There are 8 primitive data types:</h2>
           <ul>
             <li>Boolean- used to store only true and false values</li>
+            {/* dont do copy blocks here */}
             <CopyBlock
               text="boolean x = true;
 "
