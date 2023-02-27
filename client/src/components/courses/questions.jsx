@@ -14,6 +14,7 @@ function Questions(questionArray) {
     const setStatus = async () => {
       try {
         const lessonid = String(questionArray.questionArray[0].lessonId + 1);
+        //const lessonid = String(1);
         const response = await axios.put(
           `http://localhost:3001/updateJavaStatus/${userId}/${lessonid}`
         );
