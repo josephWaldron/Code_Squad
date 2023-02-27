@@ -1,0 +1,21 @@
+p {
+  color: white;
+}
+h2 {
+  color: white;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.lesson-container {
+  display: flex;
+  flex-direction: row;
+}
+ul {
+  text-align: left;
+}
+li {
+  color: white;
+}

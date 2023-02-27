@@ -7,9 +7,6 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-// mongoose.connect(
-//   "mongodb+srv://waldrojo:joe54543@cluster0.j7rukal.mongodb.net/codeSquad?retryWrites=true&w=majority"
-// );
 const connectionData = require("./connect.json");
 
 mongoose.connect(connectionData.mongodb_connection.uri);
@@ -52,6 +49,21 @@ app.post("/addUser", async (req, res) => {
 app.get("/user/:id", async (req, res) => {
   const user = await UserModel.findById(req.params.id);
   res.json(user);
+});
+
+//update user
+app.put("/updateJavaStatus/:id/:num", async (req, res) => {
+  const user = await UserModel.findByIdAndUpdate(
+    req.params.id,
+    {
+      $set: {
+        totalJavaStatus: req.params.num,
+      },
+    },
+    { new: true }
+  );
+
+  res.json({ success: true, message: "java ++ completed", user: user });
 });
 
 app.listen(3001, () => {
