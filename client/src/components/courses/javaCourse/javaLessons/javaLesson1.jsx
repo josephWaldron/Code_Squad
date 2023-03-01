@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import { CopyBlock, a11yDark } from "react-code-blocks";
+import { CodeBlock, a11yDark } from "react-code-blocks";
 import Questions from "../../questions";
 import "../../lessons.css";
 
@@ -98,18 +98,30 @@ function JavaLesson1() {
           <ul>
             <li>Boolean- used to store only true and false values</li>
             {/* dont do copy blocks here */}
-            <CopyBlock
+            <CodeBlock
+              showLineNumbers={false}
               text="boolean x = true;
 "
               language="java"
               theme={a11yDark}
             />
             <li>Byte- ranges from -127 to 128</li>
-            <CopyBlock text="byte x = 100;" language="java" theme={a11yDark} />
+            <CodeBlock
+              showLineNumbers={false}
+              text="byte x = 100;"
+              language="java"
+              theme={a11yDark}
+            />
             <li>Char- unicode character</li>
-            <CopyBlock text="char x = 'a';" language="java" theme={a11yDark} />
+            <CodeBlock
+              showLineNumbers={false}
+              text="char x = 'a';"
+              language="java"
+              theme={a11yDark}
+            />
             <li>Short- 2 times smaller than an integer.</li>
-            <CopyBlock
+            <CodeBlock
+              showLineNumbers={false}
               text="short x = 1000;"
               language="java"
               theme={a11yDark}
@@ -118,12 +130,18 @@ function JavaLesson1() {
               Int- Generally used as a default data type for integral values.
               32-bit integer.
             </li>
-            <CopyBlock text="int x = 10000;" language="java" theme={a11yDark} />
+            <CodeBlock
+              showLineNumbers={false}
+              text="int x = 10000;"
+              language="java"
+              theme={a11yDark}
+            />
             <li>
               Long- Generally used when you need a range of values more than
               those provided by int. 64-bit integer.
             </li>
-            <CopyBlock
+            <CodeBlock
+              showLineNumbers={false}
               text="long x = 100000;"
               language="java"
               theme={a11yDark}
@@ -132,7 +150,8 @@ function JavaLesson1() {
               Float- Typically used to store precise values, such as currency. A
               number with a decimal place. (7 decimal precision)
             </li>
-            <CopyBlock
+            <CodeBlock
+              showLineNumbers={false}
               text="float x = 10.5f;"
               language="java"
               theme={a11yDark}
@@ -141,7 +160,8 @@ function JavaLesson1() {
               Double- used to store decimal values with double precision. (15
               decimal precision)
             </li>
-            <CopyBlock
+            <CodeBlock
+              showLineNumbers={false}
               text="double x = 10.5;"
               language="java"
               theme={a11yDark}
@@ -150,13 +170,15 @@ function JavaLesson1() {
           <h2>Non-primitive data types</h2>
           <ul>
             <li>String- used to store a sequence of characters</li>
-            <CopyBlock
+            <CodeBlock
+              showLineNumbers={false}
               text='String x = "Hello World";'
               language="java"
               theme={a11yDark}
             />
             <li>Array- used to store collections of data</li>
-            <CopyBlock
+            <CodeBlock
+              showLineNumbers={false}
               text="int[] x = {1,2,3};"
               language="java"
               theme={a11yDark}
