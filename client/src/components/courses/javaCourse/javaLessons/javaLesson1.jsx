@@ -100,8 +100,7 @@ function JavaLesson1() {
             {/* dont do copy blocks here */}
             <CodeBlock
               showLineNumbers={false}
-              text="boolean x = true;
-"
+              text="boolean x = true;"
               language="java"
               theme={a11yDark}
             />
