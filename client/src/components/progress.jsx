@@ -25,7 +25,7 @@ const Progress = () => {
 
   const totalJavaLessons = 8;
   const javaPercentage =
-    (totalJavaStatus / totalJavaLessons / totalCourses) * 100;
+    ((totalJavaStatus - 1) / totalJavaLessons / totalCourses) * 100;
   return (
     <div class="container">
       <ProgressBar>

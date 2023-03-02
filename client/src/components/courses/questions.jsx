@@ -2,7 +2,7 @@ import { CodeBlock, a11yDark } from "react-code-blocks";
 import "./questions.css";
 import axios from "axios";
 import Cookies from "js-cookie";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function Questions(questionArray) {
   const [currentQuestion, setCurrentQuestion] = useState(0);

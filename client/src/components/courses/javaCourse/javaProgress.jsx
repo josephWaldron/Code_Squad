@@ -21,7 +21,7 @@ const JavaProgress = () => {
     if (userId !== undefined) getUser();
   }, [userId]);
   const totalJavaLessons = 2;
-  const javaPercentage = (totalJavaStatus / totalJavaLessons) * 100;
+  const javaPercentage = ((totalJavaStatus - 1) / totalJavaLessons) * 100;
   return (
     <div class="container">
       <ProgressBar>
