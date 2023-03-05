@@ -51,20 +51,53 @@ function Questions(questionArray) {
           <h3 className="question-text">
             {questionArray.questionArray[currentQuestion].question}
           </h3>
+          {/* check if the code block is not "" or "ANSWER" */}
+          {questionArray.questionArray[currentQuestion].codeBlock !== "" &&
+          questionArray.questionArray[currentQuestion].codeBlock !==
+            "ANSWER" ? (
+            <div>
+              <CodeBlock
+                text={questionArray.questionArray[currentQuestion].codeBlock}
+                language={questionArray.questionArray[currentQuestion].language}
+                showLineNumbers={false}
+                theme={a11yDark}
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
           <ul>
             {questionArray.questionArray[currentQuestion].answers.map(
               (answer) => {
-                return (
+                return questionArray.questionArray[currentQuestion]
+                  .codeBlock === "" ||
+                  questionArray.questionArray[currentQuestion].codeBlock !==
+                    "ANSWER" ? (
                   <li
                     key={answer.id}
                     onClick={() => optionClicked(answer.isCorrect)}
                   >
                     {answer.text}
                   </li>
+                ) : (
+                  <li
+                    key={answer.id}
+                    onClick={() => optionClicked(answer.isCorrect)}
+                  >
+                    <CodeBlock
+                      text={answer.text}
+                      language={
+                        questionArray.questionArray[currentQuestion].language
+                      }
+                      showLineNumbers={false}
+                      theme={a11yDark}
+                    />
+                  </li>
                 );
               }
             )}
           </ul>
+
           {incorect ? (
             <div>
               <h3 className="incorrect">Incorrect</h3>
@@ -82,15 +115,46 @@ function Questions(questionArray) {
           <h3 className="question-text">
             {questionArray.questionArray[currentQuestion].question}
           </h3>
+          {questionArray.questionArray[currentQuestion].codeBlock !== "" &&
+          questionArray.questionArray[currentQuestion].codeBlock !==
+            "ANSWER" ? (
+            <div>
+              <CodeBlock
+                text={questionArray.questionArray[currentQuestion].codeBlock}
+                language={questionArray.questionArray[currentQuestion].language}
+                showLineNumbers={false}
+                theme={a11yDark}
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
           <ul>
             {questionArray.questionArray[currentQuestion].answers.map(
               (answer) => {
-                return (
+                return questionArray.questionArray[currentQuestion]
+                  .codeBlock === "" ||
+                  questionArray.questionArray[currentQuestion].codeBlock !==
+                    "ANSWER" ? (
                   <li
                     key={answer.id}
                     onClick={() => optionClicked(answer.isCorrect)}
                   >
                     {answer.text}
+                  </li>
+                ) : (
+                  <li
+                    key={answer.id}
+                    onClick={() => optionClicked(answer.isCorrect)}
+                  >
+                    <CodeBlock
+                      text={answer.text}
+                      language={
+                        questionArray.questionArray[currentQuestion].language
+                      }
+                      showLineNumbers={false}
+                      theme={a11yDark}
+                    />
                   </li>
                 );
               }
