@@ -5,7 +5,6 @@ import { CodeBlock, a11yDark } from "react-code-blocks";
 import Questions from "../../questions";
 import "../../lessons.css";
 
-
 // Liam Lidlow
 //Alexis
 const questions = [
@@ -65,7 +64,7 @@ const questions = [
     ],
   },
 ];
-
+//Joseph was here
 //dont touch from here
 function JavaLesson1() {
   const userId = Cookies.get("userId");
