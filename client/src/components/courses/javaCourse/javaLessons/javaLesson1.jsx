@@ -49,6 +49,20 @@ const questions = [
       { id: 3, text: "int x = 10.5d;", isCorrect: false },
     ],
   },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 4,
+    codeBlock: "",
+    language: "java",
+    question: "This data type allows for the storage of characters or letters ",
+    answers: [
+      { id: 0, text: "int x = 10;", isCorrect: true },
+      { id: 1, text: "int x = 10.5;", isCorrect: false },
+      { id: 2, text: "int x = 10.5f;", isCorrect: false },
+      { id: 3, text: "int x = 10.5d;", isCorrect: false },
+    ],
+  },
 ];
 
 //dont touch from here
