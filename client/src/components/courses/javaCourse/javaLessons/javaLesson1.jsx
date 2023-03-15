@@ -57,10 +57,108 @@ const questions = [
     language: "java",
     question: "This data type allows for the storage of characters or letters ",
     answers: [
-      { id: 0, text: "int x = 10;", isCorrect: true },
-      { id: 1, text: "int x = 10.5;", isCorrect: false },
-      { id: 2, text: "int x = 10.5f;", isCorrect: false },
-      { id: 3, text: "int x = 10.5d;", isCorrect: false },
+      { id: 0, text: "Float;", isCorrect: false },
+      { id: 1, text: "Boolean;", isCorrect: false },
+      { id: 2, text: "Char;", isCorrect: true },
+      { id: 3, text: "String;", isCorrect: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 5,
+    codeBlock: "",
+    language: "java",
+    question: "This data type is a 32-bit integer that is typically used as a default value for integral values. ",
+    answers: [
+      { id: 0, text: "Double;", isCorrect: false },
+      { id: 1, text: "Float;", isCorrect: false },
+      { id: 2, text: "Int;", isCorrect: true },
+      { id: 3, text: "Short;", isCorrect: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 6,
+    codeBlock: "",
+    language: "java",
+    question: "This data type is used to contain integer numbers that are too large to fit in the Int data type. ",
+    answers: [
+      { id: 0, text: "Double;", isCorrect: false },
+      { id: 1, text: "Float;", isCorrect: false },
+      { id: 2, text: "Long;", isCorrect: true },
+      { id: 3, text: "Byte;", isCorrect: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 7,
+    codeBlock: "",
+    language: "java",
+    question: "Which of the following data types contains 4 bytes and can be used to store currency values?",
+    answers: [
+      { id: 0, text: "Double;", isCorrect: true },
+      { id: 1, text: "Float;", isCorrect: false },
+      { id: 2, text: "Int;", isCorrect: false },
+      { id: 3, text: "Short;", isCorrect: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 8,
+    codeBlock: "",
+    language: "java",
+    question: "This data type can store up to 15 decimal places and is typically used for fractional numbers.",
+    answers: [
+      { id: 0, text: "Double;", isCorrect: false },
+      { id: 1, text: "Float;", isCorrect: false },
+      { id: 2, text: "Long;", isCorrect: true },
+      { id: 3, text: "Boolean;", isCorrect: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 9,
+    codeBlock: "",
+    language: "java",
+    question: "This data type can store up to 15 decimal places and is typically used for fractional numbers.",
+    answers: [
+      { id: 0, text: "Double;", isCorrect: false },
+      { id: 1, text: "Float;", isCorrect: false },
+      { id: 2, text: "Long;", isCorrect: true },
+      { id: 3, text: "Boolean;", isCorrect: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 10,
+    codeBlock: "",
+    language: "java",
+    question: "Which of the following data types can be used to store text ",
+    answers: [
+      { id: 0, text: "Array;", isCorrect: false },
+      { id: 1, text: "String;", isCorrect: true },
+      { id: 2, text: "Boolean;", isCorrect: false },
+      { id: 3, text: "Float;", isCorrect: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 11,
+    codeBlock: "",
+    language: "java",
+    question: "What is a string data type in Java? ",
+    answers: [
+      { id: 0, text: "Generally used as a default data type for integra; values.;", isCorrect: false },
+      { id: 1, text: "Used to store collections of data, such as lists or tables.;", isCorrect: false },
+      { id: 2, text: "Unicode character;", isCorrect: false },
+      { id: 3, text: "Used to represent a sequence of characters;", isCorrect: true },
     ],
   },
 ];
