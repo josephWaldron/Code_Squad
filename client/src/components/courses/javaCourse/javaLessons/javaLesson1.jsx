@@ -161,6 +161,65 @@ const questions = [
       { id: 3, text: "Used to represent a sequence of characters;", isCorrect: true },
     ],
   },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 12,
+    codeBlock: "",
+    language: "java",
+    question: "What is an array data type in Java? ",
+    answers: [
+      { id: 0, text: "Used to represent true or false values.;", isCorrect: false },
+      { id: 1, text: "Used to store collections of data, such as lists or tables.;", isCorrect: true },
+      { id: 2, text: "Used to store a single character.;", isCorrect: false },
+      { id: 3, text: "Used to represent a sequence of characters;", isCorrect: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 13,
+    codeBlock: "",
+    language: "java",
+    question: "How is a double data type different from a Float data type? ",
+    answers: [
+      { id: 0, text: "Double data type stores up to 16 decimal places while float stores up to 7.;", isCorrect: false },
+      { id: 1, text: "There is no difference.;", isCorrect: false },
+      { id: 2, text: "Float stores decimal values with single precision, while double stores values with double precision.;", isCorrect: false },
+      { id: 3, text: "A and C.;", isCorrect: true },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 14,
+    codeBlock: "",
+    language: "java",
+    question: "Which of the following are primitive data types in Java? (more than one answer)? ",
+    answers: [
+      { id: 0, text: "String.;", isCorrect: false },
+      { id: 1, text: "Int.;", isCorrect: true },
+      { id: 2, text: "Array;", isCorrect: false },
+      { id: 3, text: "Float;", isCorrect: true },
+      { id: 4, text: "Double;", isCorrect: true },
+    ],
+  },
+  {
+    //question with code blocks for answers
+    lessonId: 1, //lesson number
+    id: 15,
+    codeBlock: "",
+    language: "java",
+    question: "Which of the following are non-primitive data types in Java? (more than one answer)? ",
+    answers: [
+      { id: 0, text: "String.;", isCorrect: true },
+      { id: 1, text: "Int.;", isCorrect: false },
+      { id: 2, text: "Array;", isCorrect: true },
+      { id: 3, text: "Float;", isCorrect: false },
+      { id: 4, text: "Long;", isCorrect: false },
+      { id: 4, text: "Char;", isCorrect: false },
+    ],
+  },
 ];
 //Joseph was here
 //dont touch from here
