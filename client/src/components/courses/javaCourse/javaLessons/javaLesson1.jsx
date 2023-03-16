@@ -125,12 +125,10 @@ const questions = [
     id: 9,
     codeBlock: "",
     language: "java",
-    question: "This data type can store up to 15 decimal places and is typically used for fractional numbers.",
+    question: "True or False : A string data type is a non-primitive data type.",
     answers: [
-      { id: 0, text: "Double;", isCorrect: false },
-      { id: 1, text: "Float;", isCorrect: false },
-      { id: 2, text: "Long;", isCorrect: true },
-      { id: 3, text: "Boolean;", isCorrect: false },
+      { id: 0, text: "True;", isCorrect: true },
+      { id: 1, text: "False;", isCorrect: false },
     ],
   },
   {
@@ -139,7 +137,7 @@ const questions = [
     id: 10,
     codeBlock: "",
     language: "java",
-    question: "Which of the following data types can be used to store text ",
+    question: "Which of the following data types can be used to store text? ",
     answers: [
       { id: 0, text: "Array;", isCorrect: false },
       { id: 1, text: "String;", isCorrect: true },
@@ -155,7 +153,7 @@ const questions = [
     language: "java",
     question: "What is a string data type in Java? ",
     answers: [
-      { id: 0, text: "Generally used as a default data type for integra; values.;", isCorrect: false },
+      { id: 0, text: "Generally used as a default data type for integral values.;", isCorrect: false },
       { id: 1, text: "Used to store collections of data, such as lists or tables.;", isCorrect: false },
       { id: 2, text: "Unicode character;", isCorrect: false },
       { id: 3, text: "Used to represent a sequence of characters;", isCorrect: true },
