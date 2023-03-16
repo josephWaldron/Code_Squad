@@ -20,8 +20,9 @@ function App() {
         <Route path="/create-account" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/courses/java" element={<JavaLessons />} />
         <Route path="/About" element={<About />} />
+        <Route path="/courses/java" element={<JavaLessons />} />
+        {/* Java Lessons go here */}
         <Route path="/courses/java/lesson1" element={<JavaLesson1 />} />
       </Routes>
     </>
