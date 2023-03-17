@@ -24,7 +24,6 @@ function App() {
         <Route path="/courses/java" element={<JavaLessons />} />
         {/* Java Lessons go here */}
         <Route path="/courses/java/lesson1" element={<JavaLesson1 />} />
-        <Route path="/courses/java/lesson3" element={<JavaLesson3 />} />
       </Routes>
     </>
   );
