@@ -21,6 +21,14 @@ const data = [
     status: "incomplete",
     button: "locked",
   },
+  {
+    id: 3,
+    name: "Lesson 3",
+    description: "Learn about Java data types",
+    url: "lesson3",
+    status: "incomplete",
+    button: "locked",
+  },
 ];
 function JavaLessons() {
   const userId = Cookies.get("userId");
