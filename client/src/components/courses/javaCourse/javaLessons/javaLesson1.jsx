@@ -69,7 +69,8 @@ const questions = [
     id: 5,
     codeBlock: "",
     language: "java",
-    question: "This data type is a 32-bit integer that is typically used as a default value for integral values. ",
+    question:
+      "This data type is a 32-bit integer that is typically used as a default value for integral values. ",
     answers: [
       { id: 0, text: "Double;", isCorrect: false },
       { id: 1, text: "Float;", isCorrect: false },
@@ -83,7 +84,8 @@ const questions = [
     id: 6,
     codeBlock: "",
     language: "java",
-    question: "This data type is used to contain integer numbers that are too large to fit in the Int data type. ",
+    question:
+      "This data type is used to contain integer numbers that are too large to fit in the Int data type. ",
     answers: [
       { id: 0, text: "Double;", isCorrect: false },
       { id: 1, text: "Float;", isCorrect: false },
@@ -97,7 +99,8 @@ const questions = [
     id: 7,
     codeBlock: "",
     language: "java",
-    question: "Which of the following data types contains 4 bytes and can be used to store currency values?",
+    question:
+      "Which of the following data types contains 4 bytes and can be used to store currency values?",
     answers: [
       { id: 0, text: "Double;", isCorrect: true },
       { id: 1, text: "Float;", isCorrect: false },
@@ -111,7 +114,8 @@ const questions = [
     id: 8,
     codeBlock: "",
     language: "java",
-    question: "This data type can store up to 15 decimal places and is typically used for fractional numbers.",
+    question:
+      "This data type can store up to 15 decimal places and is typically used for fractional numbers.",
     answers: [
       { id: 0, text: "Double;", isCorrect: false },
       { id: 1, text: "Float;", isCorrect: false },
@@ -125,7 +129,8 @@ const questions = [
     id: 9,
     codeBlock: "",
     language: "java",
-    question: "True or False : A string data type is a non-primitive data type.",
+    question:
+      "True or False : A string data type is a non-primitive data type.",
     answers: [
       { id: 0, text: "True;", isCorrect: true },
       { id: 1, text: "False;", isCorrect: false },
@@ -153,10 +158,22 @@ const questions = [
     language: "java",
     question: "What is a string data type in Java? ",
     answers: [
-      { id: 0, text: "Generally used as a default data type for integral values.;", isCorrect: false },
-      { id: 1, text: "Used to store collections of data, such as lists or tables.;", isCorrect: false },
+      {
+        id: 0,
+        text: "Generally used as a default data type for integral values.;",
+        isCorrect: false,
+      },
+      {
+        id: 1,
+        text: "Used to store collections of data, such as lists or tables.;",
+        isCorrect: false,
+      },
       { id: 2, text: "Unicode character;", isCorrect: false },
-      { id: 3, text: "Used to represent a sequence of characters;", isCorrect: true },
+      {
+        id: 3,
+        text: "Used to represent a sequence of characters;",
+        isCorrect: true,
+      },
     ],
   },
   {
@@ -167,10 +184,22 @@ const questions = [
     language: "java",
     question: "What is an array data type in Java? ",
     answers: [
-      { id: 0, text: "Used to represent true or false values.;", isCorrect: false },
-      { id: 1, text: "Used to store collections of data, such as lists or tables.;", isCorrect: true },
+      {
+        id: 0,
+        text: "Used to represent true or false values.;",
+        isCorrect: false,
+      },
+      {
+        id: 1,
+        text: "Used to store collections of data, such as lists or tables.;",
+        isCorrect: true,
+      },
       { id: 2, text: "Used to store a single character.;", isCorrect: false },
-      { id: 3, text: "Used to represent a sequence of characters;", isCorrect: false },
+      {
+        id: 3,
+        text: "Used to represent a sequence of characters;",
+        isCorrect: false,
+      },
     ],
   },
   {
@@ -181,9 +210,17 @@ const questions = [
     language: "java",
     question: "How is a double data type different from a Float data type? ",
     answers: [
-      { id: 0, text: "Double data type stores up to 16 decimal places while float stores up to 7.;", isCorrect: false },
+      {
+        id: 0,
+        text: "Double data type stores up to 16 decimal places while float stores up to 7.;",
+        isCorrect: false,
+      },
       { id: 1, text: "There is no difference.;", isCorrect: false },
-      { id: 2, text: "Float stores decimal values with single precision, while double stores values with double precision.;", isCorrect: false },
+      {
+        id: 2,
+        text: "Float stores decimal values with single precision, while double stores values with double precision.;",
+        isCorrect: false,
+      },
       { id: 3, text: "A and C.;", isCorrect: true },
     ],
   },
@@ -193,7 +230,8 @@ const questions = [
     id: 14,
     codeBlock: "",
     language: "java",
-    question: "Which of the following are primitive data types in Java? (more than one answer)? ",
+    question:
+      "Which of the following are primitive data types in Java? (more than one answer)? ",
     answers: [
       { id: 0, text: "String.;", isCorrect: false },
       { id: 1, text: "Int.;", isCorrect: true },
@@ -208,7 +246,8 @@ const questions = [
     id: 15,
     codeBlock: "",
     language: "java",
-    question: "Which of the following are non-primitive data types in Java? (more than one answer)? ",
+    question:
+      "Which of the following are non-primitive data types in Java? (more than one answer)? ",
     answers: [
       { id: 0, text: "String.;", isCorrect: true },
       { id: 1, text: "Int.;", isCorrect: false },
@@ -220,7 +259,7 @@ const questions = [
   },
 ];
 //Joseph was here
-//dont touch from here
+//Make sure to change this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function JavaLesson1() {
   const userId = Cookies.get("userId");
   const [user, setUser] = useState(null); // set up a user state to hold the data
@@ -245,8 +284,7 @@ function JavaLesson1() {
     return <div>Please log in first</div>;
   }
 
-  //if the user has not completed a previous lesson, disable the button
-
+  //Change this as well!!!!!
   return (
     <>
       <div className="lesson-container">
@@ -366,5 +404,5 @@ function JavaLesson1() {
     </>
   );
 }
-
+//Make sure to change this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export default JavaLesson1;

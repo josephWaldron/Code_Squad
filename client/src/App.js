@@ -9,6 +9,7 @@ import Courses from "./components/courses/courses";
 import JavaLessons from "./components/courses/javaCourse/javaModules";
 import About from "./components/about";
 import JavaLesson1 from "./components/courses/javaCourse/javaLessons/javaLesson1";
+import JavaLesson3 from "./components/courses/javaCourse/javaLessons/javaLesson3";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/courses/java" element={<JavaLessons />} />
         {/* Java Lessons go here */}
         <Route path="/courses/java/lesson1" element={<JavaLesson1 />} />
+        <Route path="/courses/java/lesson3" element={<JavaLesson3 />} />
       </Routes>
     </>
   );
