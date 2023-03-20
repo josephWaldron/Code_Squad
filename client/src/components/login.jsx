@@ -43,8 +43,9 @@ function Login() {
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label className="login-label" htmlFor="email">
-            Email address:<br></br>
+            Email address
           </label>
+          <br />
           <input
             type="email"
             className="login-input"
@@ -56,8 +57,9 @@ function Login() {
         </div>
         <div className="form-group">
           <label className="login-label" htmlFor="password">
-            Password<br></br>
+            Password
           </label>
+          <br />
           <input
             type="password"
             className="login-input"
