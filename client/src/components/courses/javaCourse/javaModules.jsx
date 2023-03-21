@@ -53,7 +53,15 @@ function JavaLessons() {
   if (!user) {
     return <div>Please log in first</div>;
   }
-
+  //if the user has completed all the lessons, display a message
+  if (user.totalJavaStatus > data.length) {
+    return (
+      <div>
+        You have completed all the lessons (dev note to go back to seeing all
+        the lessons to to /courses/java/lesson1 and complete the quiz
+      </div>
+    );
+  }
   //loop through the data array
   for (let i = 0; i < totalJavaStatus; i++) {
     data[i].status = "complete";
