@@ -197,10 +197,10 @@ function JavaLesson3() {
     <>
       <div className="lesson-container">
         <div className="left-container">
-          <h2>Who created Java?</h2>
+          <h2>Explaning Arrays</h2>
           <p>
-            Java was created by James Gosling in 1995. What is java? Java is a
-            programming language and a platform.
+          In Java, arrays are objects that store a fixed-size sequential
+          collection of elements of the same type.
           </p>
           <h2>What is Java used for?</h2>
           <ul>
@@ -210,21 +210,25 @@ function JavaLesson3() {
             <li>Robotics</li>
             <li>Enterprise application</li>
           </ul>
-          <h1>Java Data Types</h1>
-          <h2>There are 8 primitive data types:</h2>
+          <h1>Examples of Arrays</h1>
+          <h2>There are 2 main types of arrays used in Java:</h2>
           <ul>
-            <li>Boolean- used to store only true and false values</li>
+            <li>1D Arrays -  used to store a sequence of values in a single dimension. 
+Here's an example of how to create a 1D array of integers in Java:
+</li>
             {/* dont do copy blocks here */}
             <CodeBlock
               showLineNumbers={false}
-              text="boolean x = true;"
+              text="int[]myArray = new int[5];"
               language="java"
               theme={a11yDark}
             />
-            <li>Byte- ranges from -127 to 128</li>
+            <li>2D arrays are used to store data in a two-dimensional grid format. 
+              They are also called "matrices". Here's an example of how to create a 2D array of integers in Java:
+</li>
             <CodeBlock
               showLineNumbers={false}
-              text="byte x = 100;"
+              text="int[][] myMatrix = new int[3][4];"
               language="java"
               theme={a11yDark}
             />
