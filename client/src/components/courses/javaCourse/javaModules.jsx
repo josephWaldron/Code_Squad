@@ -24,7 +24,7 @@ const data = [
   {
     id: 3,
     name: "Lesson 3",
-    description: "Learn about Java data types",
+    description: "Learn about Java Arrays",
     url: "lesson3",
     status: "incomplete",
     button: "locked",
