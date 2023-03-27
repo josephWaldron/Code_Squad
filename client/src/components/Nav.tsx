@@ -16,11 +16,7 @@ const N = () => {
               <NavDropdown.Item href="/courses">All Courses</NavDropdown.Item>
               <NavDropdown.Item href="/courses/java">Java</NavDropdown.Item>
             </NavDropdown>
-            {isLoggedIn ? (
-              <Nav.Link href="/profile">Profile</Nav.Link>
-            ) : (
-              <Nav.Link href="/login">Login</Nav.Link>
-            )}
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
