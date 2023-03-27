@@ -3,7 +3,7 @@ export const About = () => {
   return (
     <>
       <header>
-        <h1 style = {{color: "red"}}>About / Contact</h1>
+        <h1 style = {{color: "green"}}>About / Contact</h1>
       </header>
       <section>
         <article>
