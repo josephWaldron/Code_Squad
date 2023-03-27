@@ -72,26 +72,10 @@ const questions = [
     question:
       "Which of the following is the correct way to loop through a 1D array in Java?;",
     answers: [
-      {
-        id: 0,
-        text: "for (int i = 0; i < array.size(); i++);.",
-        isCorrect: false,
-      },
-      {
-        id: 1,
-        text: "for (int i = 0; i < array.length; i++);.",
-        isCorrect: true,
-      },
-      {
-        id: 2,
-        text: "for (int i = 1; i < array.length(); i++);.",
-        isCorrect: false,
-      },
-      {
-        id: 3,
-        text: "for (int i = 1; i <= array.length; i++);.",
-        isCorrect: false,
-      },
+      { id: 0, text: "for (int i = 0; i < array.size(); i++);.", isCorrect: false },
+      {id: 1, text: "for (int i = 0; i < array.length; i++);.",isCorrect: true},
+      {id: 2, text: "for (int i = 1; i < array.length(); i++);.", isCorrect: false},
+      {id: 3,text: "for (int i = 1; i <= array.length; i++);.",isCorrect: false},
     ],
   },
   {
@@ -102,33 +86,17 @@ const questions = [
     question:
       "Which of the following is the correct way to loop through a 2D array in Java?;",
     answers: [
-      {
-        id: 0,
-        text: "for (int i = 0; i < array.size(); i++);.",
-        isCorrect: false,
-      },
-      {
-        id: 1,
-        text: "for (int i = 0; i < array.length; i++);.",
-        isCorrect: false,
-      },
-      {
-        id: 2,
-        text: "for (int i = 0; i < array.length; i++) { for (int j = 0; j < array[i].length; j++) };.",
-        isCorrect: true,
-      },
-      {
-        id: 3,
-        text: "for (int i = 1; i <= array.length; i++);.",
-        isCorrect: false,
-      },
+      {id: 0,text: "for (int i = 0; i < array.size(); i++);.",isCorrect: false},
+      {id: 1, text: "for (int i = 0; i < array.length; i++);.",isCorrect: false},
+      {id: 2,text: "for (int i = 0; i < array.length; i++) { for (int j = 0; j < array[i].length; j++) };.",isCorrect: true},
+      {id: 3,text: "for (int i = 1; i <= array.length; i++);.",isCorrect: false},
     ],
   },
   {
     // Fix this one with the code question
     lessonId: 3, //lesson number for changing the status
     id: 6,
-    codeBlock: "",
+    codeBlock: "int[][] array = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}} \nSystem.out.println(array[1][2])",
     language: "java",
     question: "What is the output of the following code?;",
     answers: [
@@ -142,7 +110,7 @@ const questions = [
     // Fix this one with the code question
     lessonId: 3, //lesson number for changing the status
     id: 7,
-    codeBlock: "",
+    codeBlock: "int[] array = {1, 2, 3, 4, 5}; \nSystem.out.println(array[3]);",
     language: "java",
     question: "What is the output of the following code?;",
     answers: [
@@ -156,7 +124,7 @@ const questions = [
     // Fix this one with the code question
     lessonId: 3, //lesson number for changing the status
     id: 8,
-    codeBlock: "",
+    codeBlock: "int[] array = {1, 2, 3, 4, 5}; \n System.out.println(array.length);",
     language: "java",
     question: "What is the output of the following code?;",
     answers: [
@@ -200,15 +168,16 @@ function JavaLesson3() {
           <h2>Explaning Arrays</h2>
           <p>
           In Java, arrays are objects that store a fixed-size sequential
-          collection of elements of the same type.
+          collection of elements of the same data type. They can be used to store multiple values in a single
+          variable , rather than declaring seperate variables for each value.
           </p>
-          <h2>What is Java used for?</h2>
+          <h2>Arrays can be used for:</h2>
           <ul>
-            <li>Desktop application</li>
-            <li>Mobile Games</li>
-            <li>Web application</li>
-            <li>Robotics</li>
-            <li>Enterprise application</li>
+            <li>Storing data elements of the same data type.</li>
+            <li>Maintaining multiple variable names using a single name.</li>
+            <li>Sorting data elements.</li>
+            <li>Performing matrix operations.</li>
+            <li>CPU scheduling.</li>
           </ul>
           <h1>Examples of Arrays</h1>
           <h2>There are 2 main types of arrays used in Java:</h2>
@@ -229,77 +198,6 @@ Here's an example of how to create a 1D array of integers in Java:
             <CodeBlock
               showLineNumbers={false}
               text="int[][] myMatrix = new int[3][4];"
-              language="java"
-              theme={a11yDark}
-            />
-            <li>Char- unicode character</li>
-            <CodeBlock
-              showLineNumbers={false}
-              text="char x = 'a';"
-              language="java"
-              theme={a11yDark}
-            />
-            <li>Short- 2 times smaller than an integer.</li>
-            <CodeBlock
-              showLineNumbers={false}
-              text="short x = 1000;"
-              language="java"
-              theme={a11yDark}
-            />
-            <li>
-              Int- Generally used as a default data type for integral values.
-              32-bit integer.
-            </li>
-            <CodeBlock
-              showLineNumbers={false}
-              text="int x = 10000;"
-              language="java"
-              theme={a11yDark}
-            />
-            <li>
-              Long- Generally used when you need a range of values more than
-              those provided by int. 64-bit integer.
-            </li>
-            <CodeBlock
-              showLineNumbers={false}
-              text="long x = 100000;"
-              language="java"
-              theme={a11yDark}
-            />
-            <li>
-              Float- Typically used to store precise values, such as currency. A
-              number with a decimal place. (7 decimal precision)
-            </li>
-            <CodeBlock
-              showLineNumbers={false}
-              text="float x = 10.5f;"
-              language="java"
-              theme={a11yDark}
-            />
-            <li>
-              Double- used to store decimal values with double precision. (15
-              decimal precision)
-            </li>
-            <CodeBlock
-              showLineNumbers={false}
-              text="double x = 10.5;"
-              language="java"
-              theme={a11yDark}
-            />
-          </ul>
-          <h2>Non-primitive data types</h2>
-          <ul>
-            <li>String- used to store a sequence of characters</li>
-            <CodeBlock
-              showLineNumbers={false}
-              text='String x = "Hello World";'
-              language="java"
-              theme={a11yDark}
-            />
-            <li>Array- used to store collections of data</li>
-            <CodeBlock
-              showLineNumbers={false}
-              text="int[] x = {1,2,3};"
               language="java"
               theme={a11yDark}
             />
