@@ -13,8 +13,8 @@ const N = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About / Contact</Nav.Link>
             <NavDropdown title="Courses" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/courses">All Courses</NavDropdown.Item>
               <NavDropdown.Item href="/courses/java">Java</NavDropdown.Item>
-              <NavDropdown.Item href="/courses/java">Python</NavDropdown.Item>
             </NavDropdown>
             {isLoggedIn ? (
               <Nav.Link href="/profile">Profile</Nav.Link>
