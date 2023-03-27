@@ -29,6 +29,14 @@ const data = [
     status: "incomplete",
     button: "locked",
   },
+  {
+    id: 4,
+    name: "Lesson 4",
+    description: "Learn about Java Loops",
+    url: "lesson4",
+    status: "incomplete",
+    button: "locked",
+  },
 ];
 function JavaLessons() {
   const userId = Cookies.get("userId");

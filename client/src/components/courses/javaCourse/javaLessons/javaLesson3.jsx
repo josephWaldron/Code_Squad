@@ -96,7 +96,7 @@ const questions = [
     // Fix this one with the code question
     lessonId: 3, //lesson number for changing the status
     id: 6,
-    codeBlock: "",
+    codeBlock: "int[][] array = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}} \nSystem.out.println(array[1][2])",
     language: "java",
     question: "What is the output of the following code?;",
     answers: [
@@ -110,7 +110,7 @@ const questions = [
     // Fix this one with the code question
     lessonId: 3, //lesson number for changing the status
     id: 7,
-    codeBlock: "",
+    codeBlock: "int[] array = {1, 2, 3, 4, 5}; \nSystem.out.println(array[3]);",
     language: "java",
     question: "What is the output of the following code?;",
     answers: [
@@ -124,7 +124,7 @@ const questions = [
     // Fix this one with the code question
     lessonId: 3, //lesson number for changing the status
     id: 8,
-    codeBlock: "",
+    codeBlock: "int[] array = {1, 2, 3, 4, 5}; \n System.out.println(array.length);",
     language: "java",
     question: "What is the output of the following code?;",
     answers: [
