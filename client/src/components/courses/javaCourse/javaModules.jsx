@@ -24,8 +24,17 @@ const data = [
   {
     id: 3,
     name: "Lesson 3",
-    description: "Learn about 1D and 2D arrays",
+    description: "Learn about Java Arrays",
+
     url: "lesson3",
+    status: "incomplete",
+    button: "locked",
+  },
+  {
+    id: 4,
+    name: "Lesson 4",
+    description: "Learn about Java Loops",
+    url: "lesson4",
     status: "incomplete",
     button: "locked",
   },
@@ -53,7 +62,15 @@ function JavaLessons() {
   if (!user) {
     return <div>Please log in first</div>;
   }
-
+  //if the user has completed all the lessons, display a message
+  if (user.totalJavaStatus > data.length) {
+    return (
+      <div>
+        You have completed all the lessons (dev note to go back to seeing all
+        the lessons to to /courses/java/lesson1 and complete the quiz
+      </div>
+    );
+  }
   //loop through the data array
   for (let i = 0; i < totalJavaStatus; i++) {
     data[i].status = "complete";
