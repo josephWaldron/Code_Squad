@@ -129,14 +129,14 @@ function JavaLesson4() {
             <li>Methods , void , returning.</li>
           </ul>
           <h1>Examples of If & Else statements</h1>
-          <h2>Replace this line</h2>
+          <h2>Keywords</h2>
           <ul>
             <li>If Statements
 </li>
             {/* dont do copy blocks here */}
             <CodeBlock
               showLineNumbers={false}
-              text="int[]myArray = new int[5];"
+              text="int value = 10; \n if (value >0) { \n code to be executed \n };"
               language="java"
               theme={a11yDark}
             />
@@ -144,7 +144,7 @@ function JavaLesson4() {
 </li>
             <CodeBlock
               showLineNumbers={false}
-              text="int[][] myMatrix = new int[3][4];"
+              text="int value = 10; \n if (value >0) { \n code to be executed \n } \n else {code in else block to be executed};"
               language="java"
               theme={a11yDark}
             />
@@ -152,7 +152,7 @@ function JavaLesson4() {
 </li>
             <CodeBlock
               showLineNumbers={false}
-              text="int[][] myMatrix = new int[3][4];"
+              text="int value = 10; \n if (value < 0) { \n code to be executed \n } \n else if (value > 10) {code in else block to be executed} else {final condition};"
               language="java"
               theme={a11yDark}
             />
