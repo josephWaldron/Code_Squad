@@ -291,11 +291,11 @@ function JavaLesson2() {
     <>
       <div className="lesson-container">
         <div className="left-container">
-          <h2>Understanding of the Main Method</h2>
+          <h2>The Main Method</h2>
           <p>
-          In Java, the main method is the entry point of a program. 
+          The main method is the entry point of a program. 
           It is the method that is executed when the program is run. 
-          The main method must be declared as “public static void main”and it must accept a single argument of the type “String[]”. 
+          Main method must be declared as “public static void main” and it must accept a single argument of the type “String[]”. 
           Once the main method is called, the code inside the method is executed, this is where you can put the code you want to run. 
           For example, you can use System.out.println() to print a message to the console or call other methods you have created.
 
@@ -304,7 +304,7 @@ function JavaLesson2() {
           <h2>Hello World</h2>
           <p>A Hello World program is an easy first coding assignment which is a program that outputs “Hello World”. </p>
 
-          <h1>Keywords in main method and how to create Hello world</h1>
+          <h1>Keywords and creating Hello world</h1>
           <h2>Keywords</h2>
           <ul>
             <li>static- this keyword means that the method belongs to the class</li>
@@ -336,7 +336,8 @@ function JavaLesson2() {
               language="java"
               theme={a11yDark}
             />
-            <h3>Creating a Hello world</h3>
+            
+            <h2>Creating a Hello world</h2>
             <li>
               Create a class that contains a main method
             </li>
