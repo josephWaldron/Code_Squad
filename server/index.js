@@ -20,14 +20,12 @@ app.post("/login", async (req, res) => {
   } else if (user.password !== password) {
     res.status(401).send("Invalid password");
   } else {
-    res.cookie("userId", user._id, { maxAge: 30 * 60 * 1000 }); // Set a cookie that lasts for 30 minutes
     res.json({ success: true, message: "Login successful", userId: user._id });
   }
 });
 
-app.post("/addUser", async (req, res) => {
+app.post("/register", async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
-
   const existingUser = await UserModel.findOne({ email: email });
   if (existingUser) {
     res
@@ -40,14 +38,17 @@ app.post("/addUser", async (req, res) => {
       email: email,
       password: password,
     });
-
-    await newUser.save();
-    res.json({ success: true, message: "Account created successfully." });
+    const savedUser = await newUser.save();
+    res.json({
+      success: true,
+      message: "Account created successfully.",
+      userId: savedUser._id,
+    });
   }
 });
 
 app.get("/user/:id", async (req, res) => {
-  const user = await UserModel.findById(req.params.id);
+  const user = await UserModel.findById(req.params.id).select("-password -__v");
   res.json(user);
 });
 

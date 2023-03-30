@@ -19,19 +19,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     min: 5,
   },
-  picturePath: {
-    type: String,
-    default: "",
-  },
-  expert: {
-    type: Boolean,
-    default: false,
-  },
-  conversations: {
-    type: Array,
-    default: [],
-  },
-  totalJavaStatus: {
+  java: {
     type: Number,
     default: 0,
   },

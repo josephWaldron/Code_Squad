@@ -1,7 +1,10 @@
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Cookies from "js-cookie";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+
 const N = () => {
-  const isLoggedIn = Cookies.get("userId");
+  //check if user is logged in
+  const isLoggedIn =
+    Cookies.get("hash") !== undefined && Cookies.get("hash") !== "";
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -16,7 +19,11 @@ const N = () => {
               <NavDropdown.Item href="/courses">All Courses</NavDropdown.Item>
               <NavDropdown.Item href="/courses/java">Java</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/login">Login</Nav.Link>
+            {isLoggedIn ? (
+              <Nav.Link href="/profile">Profile</Nav.Link>
+            ) : (
+              <Nav.Link href="/login">Login</Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
