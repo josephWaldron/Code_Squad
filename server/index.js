@@ -52,19 +52,19 @@ app.get("/user/:id", async (req, res) => {
   res.json(user);
 });
 
-//update user
-app.put("/updateJavaStatus/:id/:num", async (req, res) => {
+app.put("/update", async (req, res) => {
+  const { userId, course, num } = req.body;
   const user = await UserModel.findByIdAndUpdate(
-    req.params.id,
+    userId,
     {
       $set: {
-        totalJavaStatus: req.params.num,
+        [course]: num,
       },
     },
     { new: true }
   );
 
-  res.json({ success: true, message: "java ++ completed", user: user });
+  res.json({ success: true, message: `${course} updated` });
 });
 
 app.listen(3001, () => {

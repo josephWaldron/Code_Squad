@@ -22,6 +22,7 @@ const Profile = () => {
       )}
       {error && <p>Error: {error}</p>}
       <ProgressBar user={user} course="Java" />
+      {/* <ProgressBar user={user} course="Python" /> */}
       <Button onClick={handleLogout}>Log Out</Button>
     </>
   );
