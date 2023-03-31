@@ -4,7 +4,7 @@ import { ProgressBar } from "react-bootstrap";
 
 interface Props {
   user: User | null;
-  course?: string;
+  course: string;
 }
 
 const Progress = ({ user, course }: Props) => {
@@ -22,43 +22,9 @@ const Progress = ({ user, course }: Props) => {
     return (
       <>
         <h1>Progress for {course}</h1>
-        <ProgressBar now={progress} label={course} />
+        {/* change variants for different colors */}
+        <ProgressBar now={progress} label={course} variant="" />
         <h3>{progress.toFixed(2)}%</h3>
-      </>
-    );
-  }
-  const totalCourses = courses.length;
-  if (user) {
-    let percentages: number[] = [];
-    let labels: string[] = [];
-
-    for (let i = 0; i < totalCourses; i++) {
-      labels[i] = courses[i].name;
-      //let userProgress = user[labels[i].toLowerCase() as keyof User];
-      let userProgress = 2;
-
-      percentages[i] =
-        (Number(userProgress) / courses[i].lessons.length / totalCourses) * 100;
-    }
-    const colorMap = {
-      0: "success",
-      1: "warning",
-      2: "danger",
-      3: "info",
-    };
-    return (
-      <>
-        <h1>TotalProgress</h1>
-        <ProgressBar>
-          {percentages.map((percentage, index) => (
-            <ProgressBar
-              key={index}
-              //fix variant
-              now={percentage}
-              label={labels[index]}
-            />
-          ))}
-        </ProgressBar>
       </>
     );
   }
