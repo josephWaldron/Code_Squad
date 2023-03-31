@@ -1,6 +1,7 @@
 import Cookies from "js-cookie";
 import { Alert, Button } from "react-bootstrap";
 import getUser from "../hooks/getUser";
+import ProgressBar from "./Progress";
 
 const Profile = () => {
   const { user, error } = getUser();
@@ -14,18 +15,14 @@ const Profile = () => {
   return (
     <>
       {justIn && <Alert>You have successfully logged in. Welcome!</Alert>}
-      <div>
-        {user && (
-          <h1>
-            {" "}
-            Welcome {user.firstName} {user.lastName}!
-          </h1>
-          /* <p>Email: {user.email}</p>
-          <p>Java: {user.java}</p> */
-        )}
-        {error && <p>Error: {error}</p>}
-        <Button onClick={handleLogout}>Log Out</Button>
-      </div>
+      {user && (
+        <h1>
+          Welcome {user.firstName} {user.lastName}!
+        </h1>
+      )}
+      {error && <p>Error: {error}</p>}
+      <ProgressBar user={user} />
+      <Button onClick={handleLogout}>Log Out</Button>
     </>
   );
 };

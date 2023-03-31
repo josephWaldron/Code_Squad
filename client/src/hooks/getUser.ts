@@ -9,12 +9,12 @@ export interface User {
   lastName: string;
   email: string;
   java: number;
+  python: number;
 }
 
 const getUser = () => {
   const [user, setUser] = useState<User | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const userId = Cookies.get("hash");
   useEffect(() => {
     const fetchUser = async () => {
       try {

@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  python: {
+    type: Number,
+    default: 0,
+  },
 });
 
 const UserModel = mongoose.model("users", userSchema);
