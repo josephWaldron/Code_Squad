@@ -53,7 +53,7 @@ app.get("/user/:id", async (req, res) => {
 
 app.put("/update", async (req, res) => {
   const { userId, course, num } = req.body;
-  const user = await UserModel.findByIdAndUpdate(
+  await UserModel.findByIdAndUpdate(
     userId,
     {
       $set: {

@@ -5,6 +5,10 @@ import { Course } from "./AllCourses";
 interface Props {
   course: Course;
 }
+export interface Lesson {
+  id: number;
+  description: string;
+}
 
 const DisplayLessons = ({ course }: Props) => {
   const { user, error } = getUser();

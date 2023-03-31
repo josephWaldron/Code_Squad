@@ -1,5 +1,6 @@
 import { Button, Card } from "react-bootstrap";
 import courses from "../../data/courses";
+import { Lesson } from "./DisplayLessons";
 
 export interface Course {
   id: number;
@@ -7,11 +8,6 @@ export interface Course {
   img: string;
   complete: boolean;
   lessons: Lesson[];
-}
-
-export interface Lesson {
-  id: number;
-  description: string;
 }
 
 const AllCourses = () => {

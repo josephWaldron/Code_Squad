@@ -7,7 +7,7 @@ export default [
     name: "Java", //make sure this is capitalized
     img: "../src/assets/java.png", //path to image
     complete: true, //is the course content finished?
-    lessons: javaLessons,  //array of lessons
+    lessons: javaLessons, //array of lessons
   },
   {
     id: 2,
