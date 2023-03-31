@@ -1,6 +1,6 @@
 import { Alert } from "react-bootstrap";
 import getUser from "../../hooks/getUser";
-import { Course } from "./AllCourses";
+import { Course } from "./Courses";
 
 interface Props {
   course: Course;
@@ -15,15 +15,14 @@ const DisplayLessons = ({ course }: Props) => {
   if (error == "noCookie") {
     return (
       <Alert variant="danger">
-        Please <Alert.Link href="/login">Log in</Alert.Link> to view this page.{" "}
+        Please <Alert.Link href="/login">Log in</Alert.Link> or
+        <Alert.Link href="/register"> Register</Alert.Link> to view this page.
       </Alert>
     );
   }
-  return (
-    <div>
-      <h1>{course.name}</h1>
-    </div>
-  );
+  console.log(user);
+
+  return <div>temp</div>;
 };
 
 export default DisplayLessons;

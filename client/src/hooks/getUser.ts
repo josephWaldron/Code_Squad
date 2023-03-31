@@ -13,7 +13,7 @@ export interface User {
 }
 
 const getUser = () => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User>({} as User);
   const [error, setError] = useState<string | null>(null);
   const isLoggedIn =
     Cookies.get("hash") !== undefined && Cookies.get("hash") !== "";

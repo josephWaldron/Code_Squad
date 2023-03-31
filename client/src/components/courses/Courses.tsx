@@ -10,13 +10,13 @@ export interface Course {
   lessons: Lesson[];
 }
 
-const AllCourses = () => {
+const Courses = () => {
   const coursesArray = courses.map((course) => {
     return {
       id: course.id,
       name: course.name,
       img: course.img,
-      completed: course.complete,
+      complete: course.complete,
       lessons: course.lessons,
     };
   });
@@ -33,7 +33,7 @@ const AllCourses = () => {
               width="60"
               height="60"
             />
-            {course.completed ? (
+            {course.complete ? (
               <Button
                 key={course.id}
                 href={`/courses/${course.name.toLowerCase()}`}
@@ -52,4 +52,4 @@ const AllCourses = () => {
   );
 };
 
-export default AllCourses;
+export default Courses;

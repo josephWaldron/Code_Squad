@@ -3,7 +3,6 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import courses from "../data/courses";
 
 const N = () => {
-  //check if user is logged in
   const isLoggedIn =
     Cookies.get("hash") !== undefined && Cookies.get("hash") !== "";
   const courseNames: String[] = courses.map((course) => course.name);

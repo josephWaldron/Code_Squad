@@ -6,7 +6,7 @@ import Login from "./components/Login";
 import N from "./components/Nav";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
-import AllCourses from "./components/courses/AllCourses";
+import Courses from "./components/courses/Courses";
 import courses from "./data/courses";
 import DisplayLessons from "./components/courses/DisplayLessons";
 
@@ -27,7 +27,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/courses" element={<AllCourses />} />
+        <Route path="/courses" element={<Courses />} />
         {courseRoutes}
       </Routes>
     </>

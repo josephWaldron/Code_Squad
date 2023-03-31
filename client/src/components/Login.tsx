@@ -21,8 +21,10 @@ const Login = () => {
         email,
         password,
       });
-      Cookies.set("hash", response.data.userId, { expires: 1 });
-      const expirationTime = new Date(Date.now() + 5000); // Set expiration time 5 seconds from now
+      var expirationDate = new Date();
+      expirationDate.setTime(expirationDate.getTime() + 30 * 60 * 1000);
+      Cookies.set("hash", response.data.userId, { expires: expirationDate });
+      const expirationTime = new Date(Date.now() + 5000);
       Cookies.set("new", "true", { expires: expirationTime });
       window.location.href = "/profile";
     } catch (error) {
