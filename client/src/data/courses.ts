@@ -3,16 +3,16 @@ import pythonLessons from "./python";
 
 export default [
   {
-    id: 1,
-    name: "java",
-    img: "../assets/java.png",
-    complete: true,
-    lessons: javaLessons,
+    id: 1, //numerical id number
+    name: "Java", //make sure this is capitalized
+    img: "../src/assets/java.png", //path to image
+    complete: true, //is the course content finished?
+    lessons: javaLessons,  //array of lessons
   },
   {
     id: 2,
-    name: "python",
-    img: "../assets/python.png",
+    name: "Python",
+    img: "../src/assets/python.png",
     complete: false,
     lessons: pythonLessons,
   },

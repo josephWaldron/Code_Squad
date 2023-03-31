@@ -8,7 +8,9 @@ const LandingPage = () => {
   return (
     <>
       {justOut && (
-        <Alert>You have successfully logged out. Have a good day!</Alert>
+        <Alert variant="success">
+          You have successfully logged out. Have a good day!
+        </Alert>
       )}
       <h1>Learn to code with engaging lessons and exciting activities!</h1>
       <p>Beautifully designed courses to help beginners learn how to code.</p>

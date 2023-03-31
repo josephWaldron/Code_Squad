@@ -13,7 +13,6 @@ mongoose.connect(connectionData.mongodb_connection.uri);
 
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
-
   const user = await UserModel.findOne({ email: email });
   if (!user) {
     res.status(404).send("User not found");

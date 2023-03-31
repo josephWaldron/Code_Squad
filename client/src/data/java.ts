@@ -1,17 +1,18 @@
 export default [
   {
-    id: 1,
-    description: "Learn the basics of Java",
-    unlocked: false,
+    id: 1, //numerical id number
+    description: "Learn the basics of Java",  //description of lesson
   },
   {
     id: 2,
-    description: "Learn about Java data types",
-    unlocked: false,
+    description: "Learn about Main Method and Hello World",
   },
   {
     id: 3,
-    description: "Learn about Java arrays",
-    unlocked: false,
+    description: "Learn about Java Arrays",
+  },
+  {
+    id: 4,
+    description: "Learn about Java Loops",
   },
 ];

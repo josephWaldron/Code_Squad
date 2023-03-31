@@ -1,10 +1,12 @@
 import Cookies from "js-cookie";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import courses from "../data/courses";
 
 const N = () => {
   //check if user is logged in
   const isLoggedIn =
     Cookies.get("hash") !== undefined && Cookies.get("hash") !== "";
+  const courseNames: String[] = courses.map((course) => course.name);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -17,7 +19,11 @@ const N = () => {
             <Nav.Link href="/about">About / Contact</Nav.Link>
             <NavDropdown title="Courses" id="basic-nav-dropdown">
               <NavDropdown.Item href="/courses">All Courses</NavDropdown.Item>
-              <NavDropdown.Item href="/courses/java">Java</NavDropdown.Item>
+              {courseNames.map((courseName, index) => (
+                <NavDropdown.Item key={index} href={`/courses/${courseName}`}>
+                  {courseName}
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
             {isLoggedIn ? (
               <Nav.Link href="/profile">Profile</Nav.Link>

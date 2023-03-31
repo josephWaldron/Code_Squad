@@ -15,6 +15,9 @@ export interface User {
 const getUser = () => {
   const [user, setUser] = useState<User | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const isLoggedIn =
+    Cookies.get("hash") !== undefined && Cookies.get("hash") !== "";
+
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -30,8 +33,12 @@ const getUser = () => {
         }
       }
     };
-    fetchUser();
-  }, []);
+    if (isLoggedIn) {
+      fetchUser();
+    } else {
+      setError("noCookie");
+    }
+  }, [isLoggedIn]);
 
   return { user, error };
 };

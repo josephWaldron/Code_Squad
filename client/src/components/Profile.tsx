@@ -5,6 +5,14 @@ import ProgressBar from "./Progress";
 
 const Profile = () => {
   const { user, error } = getUser();
+  if (error == "noCookie") {
+    return (
+      <Alert variant="danger">
+        Please <Alert.Link href="/login">Log in</Alert.Link> to view this page.{" "}
+      </Alert>
+    );
+  }
+
   const justIn = Cookies.get("new") !== undefined && Cookies.get("new") !== "";
   const handleLogout = () => {
     Cookies.remove("hash");
@@ -14,7 +22,11 @@ const Profile = () => {
   };
   return (
     <>
-      {justIn && <Alert>You have successfully logged in. Welcome!</Alert>}
+      {justIn && (
+        <Alert variant="success">
+          You have successfully logged in. Welcome!
+        </Alert>
+      )}
       {user && (
         <h1>
           Welcome {user.firstName} {user.lastName}!
