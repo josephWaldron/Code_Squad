@@ -83,6 +83,58 @@ const questions = [
       { id: 3, text: "Boolean", isCorrect: true },
     ],
   },
+  {
+    lessonId: 4, //lesson number for changing the status
+    id: 7,
+    codeBlock: "",
+    language: "java",
+    question: "What is the maximum number of else if statements that can be associated with a single if statement?",
+    answers: [
+      { id: 0, text: "1", isCorrect: false },
+      { id: 1, text: "2", isCorrect: false },
+      { id: 2, text: "10", isCorrect: false },
+      { id: 3, text: "There is no maximum limit", isCorrect: true },
+    ],
+  },
+  {
+    lessonId: 4, //lesson number for changing the status
+    id: 8,
+    codeBlock: "",
+    language: "java",
+    question: "What is the purpose of an else if statement in an if-else statement?",
+    answers: [
+      { id: 0, text: "To repeat a block of code multipe times", isCorrect: false },
+      { id: 1, text: "To exeucte a block of code only if a certain condition is true", isCorrect: false },
+      { id: 2, text: "To execute a block of code only if the condition in the if statement is false", isCorrect: false },
+      { id: 3, text: "To check additional conditions if the condition in the corresponding if statement is false", isCorrect: true },
+    ],
+  },
+  {
+    lessonId: 4, //lesson number for changing the status
+    id: 9,
+    codeBlock: "ANSWER",
+    language: "java",
+    question: "What is the syntax of an if statement?",
+    answers: [
+      { id: 0, text: "if (condition) {code block}", isCorrect: true },
+      { id: 1, text: "while (condition) {code block}", isCorrect: false },
+      { id: 2, text: "for (condition) {code block}", isCorrect: false },
+      { id: 3, text: "switch (condition) {code block}", isCorrect: false },
+    ],
+  },
+  {
+    lessonId: 4, //lesson number for changing the status
+    id: 10,
+    codeBlock: "",
+    language: "java",
+    question: "What is the purpose of an if-else statement in programming?",
+    answers: [
+      { id: 0, text: "To repeat a block of code multiple times", isCorrect: false },
+      { id: 1, text: "To execute a block of code only if a certain condition is true", isCorrect: true },
+      { id: 2, text: "To declare a variable in the program", isCorrect: false },
+      { id: 3, text: "To print output to the console ", isCorrect: false },
+    ],
+  },
 ];
 function JavaLesson4() {
   const userId = Cookies.get("userId");
@@ -129,14 +181,14 @@ function JavaLesson4() {
             <li>Methods , void , returning.</li>
           </ul>
           <h1>Examples of If & Else statements</h1>
-          <h2>Replace this line</h2>
+          <h2>Keywords</h2>
           <ul>
             <li>If Statements
 </li>
             {/* dont do copy blocks here */}
             <CodeBlock
               showLineNumbers={false}
-              text="int[]myArray = new int[5];"
+              text="int value = 10; \n if (value >0) { \n code to be executed \n };"
               language="java"
               theme={a11yDark}
             />
@@ -144,7 +196,7 @@ function JavaLesson4() {
 </li>
             <CodeBlock
               showLineNumbers={false}
-              text="int[][] myMatrix = new int[3][4];"
+              text="int value = 10; \n if (value >0) { \n code to be executed \n } \n else {code in else block to be executed};"
               language="java"
               theme={a11yDark}
             />
@@ -152,7 +204,7 @@ function JavaLesson4() {
 </li>
             <CodeBlock
               showLineNumbers={false}
-              text="int[][] myMatrix = new int[3][4];"
+              text="int value = 10; \n if (value < 0) { \n code to be executed \n } \n else if (value > 10) {code in else block to be executed} else {final condition};"
               language="java"
               theme={a11yDark}
             />
