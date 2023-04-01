@@ -8,14 +8,14 @@ import Profile from "./components/Profile";
 import Register from "./components/Register";
 import Courses from "./components/courses/Courses";
 import courses from "./data/courses";
-import DisplayLessons from "./components/courses/DisplayLessons";
+import DisplayCourse from "./components/courses/DisplayCourse";
 
 function App() {
   const courseRoutes = courses.map((course) => (
     <Route
       key={course.id}
       path={`/courses/${course.name.toLowerCase()}`}
-      element={<DisplayLessons course={course} />}
+      element={<DisplayCourse course={course} />}
     />
   ));
   return (

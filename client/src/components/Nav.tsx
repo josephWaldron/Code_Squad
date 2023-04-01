@@ -5,7 +5,6 @@ import courses from "../data/courses";
 const N = () => {
   const isLoggedIn =
     Cookies.get("hash") !== undefined && Cookies.get("hash") !== "";
-  const courseNames: String[] = courses.map((course) => course.name);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -18,9 +17,13 @@ const N = () => {
             <Nav.Link href="/about">About / Contact</Nav.Link>
             <NavDropdown title="Courses" id="basic-nav-dropdown">
               <NavDropdown.Item href="/courses">All Courses</NavDropdown.Item>
-              {courseNames.map((courseName, index) => (
-                <NavDropdown.Item key={index} href={`/courses/${courseName}`}>
-                  {courseName}
+              {courses.map((course, index) => (
+                <NavDropdown.Item
+                  key={index}
+                  href={`/courses/${course.name}`}
+                  disabled={!course.complete} // Add disabled prop
+                >
+                  {course.name}
                 </NavDropdown.Item>
               ))}
             </NavDropdown>

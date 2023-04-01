@@ -1,18 +1,24 @@
+import lesson1 from "./java/lesson1";
+
 export default [
   {
     id: 1, //numerical id number
-    description: "Learn the basics of Java",  //description of lesson
+    description: "Basics of Java", //description of lesson
+    questions: lesson1,
   },
   {
     id: 2,
-    description: "Learn about Main Method and Hello World",
+    description: "Main Method and Hello World",
+    questions: lesson1,
   },
   {
     id: 3,
-    description: "Learn about Java Arrays",
+    description: "Java Arrays",
+    questions: lesson1,
   },
   {
     id: 4,
-    description: "Learn about Java Loops",
+    description: "Java Loops",
+    questions: lesson1,
   },
 ];

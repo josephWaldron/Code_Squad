@@ -3,6 +3,8 @@ import { Alert, Button } from "react-bootstrap";
 import getUser from "../hooks/getUser";
 import ProgressBar from "./Progress";
 import courses from "../data/courses";
+import { Course } from "./courses/Courses";
+import React from "react";
 
 const Profile = () => {
   const { user, error } = getUser();
@@ -21,15 +23,6 @@ const Profile = () => {
     Cookies.set("new", "true", { expires: expirationTime });
     window.location.href = "/";
   };
-  const coursesArray = courses.map((course) => {
-    return {
-      id: course.id,
-      name: course.name,
-      img: course.img,
-      complete: course.complete,
-      lessons: course.lessons,
-    };
-  });
   return (
     <>
       {justIn && (
@@ -43,9 +36,19 @@ const Profile = () => {
         </h1>
       )}
       {error && <p>Error: {error}</p>}
-      {coursesArray.map((course, index) => {
-        if (course.complete) return <ProgressBar course={course} key={index} />;
+      {courses.map((course) => {
+        if (course.complete) {
+          return (
+            <React.Fragment key={course.id}>
+              <ProgressBar course={course} />
+              <Button href={`/courses/${course.name.toLowerCase()}`}>
+                Continue {course.name}
+              </Button>
+            </React.Fragment>
+          );
+        }
       })}
+
       <Button onClick={handleLogout}>Log Out</Button>
     </>
   );

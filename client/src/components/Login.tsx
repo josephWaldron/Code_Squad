@@ -22,7 +22,9 @@ const Login = () => {
         password,
       });
       var expirationDate = new Date();
+      //set the expiration date to 1 hour from now
       expirationDate.setTime(expirationDate.getTime() + 30 * 60 * 1000);
+
       Cookies.set("hash", response.data.userId, { expires: expirationDate });
       const expirationTime = new Date(Date.now() + 5000);
       Cookies.set("new", "true", { expires: expirationTime });

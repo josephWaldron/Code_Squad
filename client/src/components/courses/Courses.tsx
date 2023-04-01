@@ -1,6 +1,6 @@
 import { Button, Card } from "react-bootstrap";
 import courses from "../../data/courses";
-import { Lesson } from "./DisplayLessons";
+import { Lesson } from "./DisplayCourse";
 
 export interface Course {
   id: number;
@@ -11,18 +11,9 @@ export interface Course {
 }
 
 const Courses = () => {
-  const coursesArray = courses.map((course) => {
-    return {
-      id: course.id,
-      name: course.name,
-      img: course.img,
-      complete: course.complete,
-      lessons: course.lessons,
-    };
-  });
   return (
     <div>
-      {coursesArray.map((course, index) => {
+      {courses.map((course, index) => {
         return (
           <Card bg={"dark"} key={index}>
             <h1> {course.name}</h1>
