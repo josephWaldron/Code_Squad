@@ -6,9 +6,10 @@ import Login from "./components/Login";
 import N from "./components/Nav";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
-import Courses from "./components/courses/Courses";
+import Courses from "./components/courses/render/Courses";
 import courses from "./data/courses";
-import DisplayCourse from "./components/courses/DisplayCourse";
+import DisplayCourse from "./components/courses/render/DisplayCourse";
+import Java_1 from "./components/courses/java/Java_1";
 
 function App() {
   const courseRoutes = courses.map((course) => (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         {courseRoutes}
         {/* toDo programmatically generate routes for each lesson in each course  */}
+        <Route path="/courses/java/lesson1" element={<Java_1 />} />
       </Routes>
     </>
   );

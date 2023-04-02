@@ -1,6 +1,6 @@
 import getUser from "../hooks/getUser";
 import { ProgressBar } from "react-bootstrap";
-import { Course } from "./courses/Courses";
+import { Course } from "./courses/render/Courses";
 import getProgress from "../hooks/getProgress";
 
 interface Props {

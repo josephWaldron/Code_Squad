@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Course } from "../components/courses/Courses";
+import { Course } from "../components/courses/render/Courses";
 import courses from "../data/courses";
 import { User } from "./getUser";
 

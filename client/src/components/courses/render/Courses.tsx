@@ -1,5 +1,5 @@
 import { Button, Card } from "react-bootstrap";
-import courses from "../../data/courses";
+import courses from "../../../data/courses";
 import { Lesson } from "./DisplayCourse";
 
 export interface Course {

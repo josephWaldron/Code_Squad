@@ -1,9 +1,8 @@
 import { Alert, Button, Col, Container, Row } from "react-bootstrap";
-import getProgress from "../../hooks/getProgress";
-import getUser from "../../hooks/getUser";
-import Progress from "../Progress";
+import getProgress from "../../../hooks/getProgress";
+import getUser from "../../../hooks/getUser";
+import Progress from "../../Progress";
 import { Course } from "./Courses";
-import { Question } from "./Questions";
 
 interface Props {
   course: Course;
@@ -11,7 +10,6 @@ interface Props {
 export interface Lesson {
   id: number;
   description: string;
-  questions: Question[];
 }
 
 const DisplayLessons = ({ course }: Props) => {
