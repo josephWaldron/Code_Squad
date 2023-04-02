@@ -29,6 +29,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/courses" element={<Courses />} />
         {courseRoutes}
+        {/* toDo programmatically generate routes for each lesson in each course  */}
       </Routes>
     </>
   );

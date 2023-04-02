@@ -3,7 +3,6 @@ import { Alert, Button } from "react-bootstrap";
 import getUser from "../hooks/getUser";
 import ProgressBar from "./Progress";
 import courses from "../data/courses";
-import { Course } from "./courses/Courses";
 import React from "react";
 
 const Profile = () => {
