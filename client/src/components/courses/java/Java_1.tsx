@@ -6,7 +6,7 @@ const questions: Question[] = [
   {
     id: 1, //Please reference Question interface in Questions.tsx
     type: 0, //multiple choice 0 , checks 1
-    codeBlock: "",
+    codeBlock: "NONE",
     question: "Which of the following values can a boolean value contain?",
     answers: [
       { id: 0, text: "Only True", correct: false },
@@ -19,7 +19,7 @@ const questions: Question[] = [
     id: 2,
     type: 1, //multiple choice 0 , checks 1
     question: "Which part of the code is incorrect?",
-    codeBlock: "",
+    codeBlock: "NONE",
     answers: [
       { id: 0, text: "char needs to be in single quotes", correct: true },
       { id: 1, text: "Missing semicolon", correct: false },
@@ -185,7 +185,7 @@ const Java_1 = () => {
           </ul>
         </Col>
         <Col>
-          <Questions questions={questions} courseName={"Java"} />
+          <Questions questions={questions} courseName={"Java"} lessonId={1} />
         </Col>
       </Row>
     </Container>
