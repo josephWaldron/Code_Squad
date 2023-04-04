@@ -1,6 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import { a11yDark, CodeBlock } from "react-code-blocks";
+import { useHref } from "react-router-dom";
+import updateUserStatus from "../../../hooks/updateUserStatus";
 
 export interface Question {
   id: number;
@@ -17,41 +19,68 @@ export interface Answers {
 
 interface Props {
   questions: Question[];
-  courseName: String;
+  course: string;
   lessonId: number;
 }
 
-const Questions = ({ questions, courseName, lessonId }: Props) => {
+const Questions = ({ questions, course, lessonId }: Props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [buttonDisabled, setButtonDisabled] = useState(true);
-  const [buttonVariant, setButtonVariant] = useState("danger");
-  // let selectedAnswers: number[] = [];
+  const [selectedAnswers, setSelectedAnswers] = useState(new Set<number>());
+  const [feedback, setFeedback] = useState<string>("");
+  const [isQuizFinished, setIsQuizFinished] = useState(false);
+
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleNext = () => {
+    const correctAnswers = questions[currentQuestion].answers
+      .filter((answer) => answer.correct)
+      .map((answer) => answer.id);
+    const isCorrect =
+      correctAnswers.length === selectedAnswers.size &&
+      correctAnswers.every((id) => selectedAnswers.has(id));
+
+    if (isCorrect) {
+      setFeedback("");
+    } else {
+      setFeedback("Incorrect answer. Please try again.");
+      return;
+    }
+
+    // Reset the form and state
     formRef.current!.reset();
-    setButtonDisabled(true);
-    setButtonVariant("danger");
+    setSelectedAnswers(new Set<number>());
+
+    // Move to the next question if there's more
+
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setIsQuizFinished(true);
     }
   };
 
+  useEffect(() => {
+    if (isQuizFinished) {
+      updateUserStatus({ lessonId, course });
+      location.href = `/courses/${course}/`;
+    }
+  }, [isQuizFinished, lessonId, course]);
+
   return (
     <>
-      <h1>Questions</h1>
+      <h1>Quiz</h1>
       <h2>
-        {currentQuestion + 1} out of {questions.length}
+        Question {currentQuestion + 1}/{questions.length}
       </h2>
       <Form ref={formRef}>
-        <Card bg="dark">
+        <Card bg="dark" style={{ height: "500px" }}>
           <Card.Body>
             <Card.Title>{questions[currentQuestion].question}</Card.Title>
             {questions[currentQuestion].codeBlock !== "NONE" &&
             questions[currentQuestion].codeBlock !== "ANSWER" ? (
               <CodeBlock
                 text={questions[currentQuestion].codeBlock}
-                language={courseName}
+                language={course}
                 showLineNumbers={false}
                 theme={a11yDark}
               />
@@ -70,7 +99,7 @@ const Questions = ({ questions, courseName, lessonId }: Props) => {
                     questions[currentQuestion].codeBlock === "ANSWER" ? (
                       <CodeBlock
                         text={answer.text}
-                        language={courseName}
+                        language={course}
                         showLineNumbers={false}
                         theme={a11yDark}
                       />
@@ -79,29 +108,29 @@ const Questions = ({ questions, courseName, lessonId }: Props) => {
                     )
                   }
                   onClick={() => {
-                    //ADD VARIANTS TO WORK WITH CHECKBOXES
+                    const updatedSelectedAnswers = new Set(selectedAnswers);
                     if (questions[currentQuestion].type === 0) {
-                      if (answer.correct) {
-                        setButtonVariant("success");
-                        setButtonDisabled(false);
-                      } else {
-                        setButtonVariant("danger");
-                        setButtonDisabled(true);
-                      }
-                    } else {
-                      console.log("checkbox");
+                      // Handle radio buttons (single-select)
+                      updatedSelectedAnswers.clear();
                     }
+                    if (updatedSelectedAnswers.has(answer.id)) {
+                      updatedSelectedAnswers.delete(answer.id);
+                    } else {
+                      updatedSelectedAnswers.add(answer.id);
+                    }
+                    setSelectedAnswers(updatedSelectedAnswers);
                   }}
                 />
               ))}
             </div>
             <Button
               onClick={handleNext}
-              disabled={buttonDisabled}
-              variant={buttonVariant}
+              disabled={selectedAnswers.size === 0}
+              variant={"outline-primary"}
             >
               Next
             </Button>
+            {feedback && <p className="text-danger mt-2">{feedback}</p>}
           </Card.Body>
         </Card>
       </Form>

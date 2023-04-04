@@ -53,17 +53,17 @@ app.get("/user/:id", async (req, res) => {
 
 app.put("/update", async (req, res) => {
   const { userId, course, num } = req.body;
+  const courseLower = course.toLowerCase();
   await UserModel.findByIdAndUpdate(
     userId,
     {
       $set: {
-        [course]: num,
+        [courseLower]: num,
       },
     },
     { new: true }
   );
-
-  res.json({ success: true, message: `${course} updated` });
+  res.json({ success: true, message: `${courseLower} updated` });
 });
 
 app.listen(3001, () => {

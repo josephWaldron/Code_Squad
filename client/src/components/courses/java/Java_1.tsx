@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { a11yDark, CodeBlock } from "react-code-blocks";
-import Questions, { Question } from "../render/questionsRender/Questions";
+import Questions, { Question } from "../render/Questions";
 
 const questions: Question[] = [
   {
@@ -185,7 +185,7 @@ const Java_1 = () => {
           </ul>
         </Col>
         <Col>
-          <Questions questions={questions} courseName={"Java"} lessonId={1} />
+          <Questions questions={questions} course={"Java"} lessonId={1} />
         </Col>
       </Row>
     </Container>
