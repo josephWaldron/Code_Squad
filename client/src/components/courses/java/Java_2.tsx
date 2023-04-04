@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { a11yDark, CodeBlock } from "react-code-blocks";
+import { a11yDark, CodeBlock, CopyBlock } from "react-code-blocks";
 import Questions, { Question } from "../render/Questions";
 
 const questions: Question[] = [
@@ -323,7 +323,7 @@ const Java_2 = () => {
               theme={a11yDark}
             />
             <li>
-              args- this keyword is a paramter with an array of strings that
+              args- this keyword is a parameter with an array of strings that
               contains any command-line arguments passed to the program
             </li>
             <CodeBlock
@@ -344,20 +344,14 @@ const Java_2 = () => {
 
             <h2>Creating a Hello world</h2>
             <li>Create a class that contains a main method</li>
-            <CodeBlock
+            <CopyBlock
               showLineNumbers={false}
-              text="class HelloWorld {
-                public static void main(String args[]){"
-              language="java"
-              theme={a11yDark}
-            />
-            <li>
-              A System.out.println statement is used to print the string "Hello
-              World"
-            </li>
-            <CodeBlock
-              showLineNumbers={false}
-              text="System.out.println('Hello World');}}"
+              text='class HelloWorld {
+    public static void main(String args[]){
+        //A System.out.println statement is used to print the string "Hello World"
+        System.out.println("Hello World");
+    }
+}'
               language="java"
               theme={a11yDark}
             />

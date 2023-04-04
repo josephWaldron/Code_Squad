@@ -125,7 +125,7 @@ const Questions = ({ questions, course, lessonId }: Props) => {
             <Button
               onClick={handleNext}
               disabled={selectedAnswers.size === 0}
-              variant={"outline-primary"}
+              variant={"primary"}
             >
               Next
             </Button>
