@@ -5,7 +5,7 @@ import Questions, { Question } from "../render/Questions";
 const questions: Question[] = [
   {
     id: 1,
-    codeBlock: "",
+    codeBlock: "NONE",
     type: 0,
     question: "What is an array in programming?",
     answers: [
@@ -17,7 +17,7 @@ const questions: Question[] = [
   },
   {
     id: 2,
-    codeBlock: "",
+    codeBlock: "NONE",
     type: 0,
     question:
       "Which of the following is the correct way to declare a 1D integer array in Java?",
@@ -30,7 +30,7 @@ const questions: Question[] = [
   },
   {
     id: 3,
-    codeBlock: "",
+    codeBlock: "NONE",
     type: 0,
     question:
       "What is the index of the first element in the first row of a 2D array in Java?;",
@@ -43,7 +43,7 @@ const questions: Question[] = [
   },
   {
     id: 4,
-    codeBlock: "",
+    codeBlock: "NONE",
     type: 0,
     question:
       "Which of the following is the correct way to declare a 2D array in Java?;",
@@ -56,7 +56,7 @@ const questions: Question[] = [
   },
   {
     id: 5,
-    codeBlock: "",
+    codeBlock: "NONE",
     type: 0,
     question:
       "Which of the following is the correct way to loop through a 1D array in Java?;",
@@ -85,7 +85,7 @@ const questions: Question[] = [
   },
   {
     id: 6,
-    codeBlock: "",
+    codeBlock: "NONE",
     type: 0,
     question:
       "Which of the following is the correct way to loop through a 2D array in Java?;",
