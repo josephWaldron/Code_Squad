@@ -26,6 +26,10 @@ const userSchema = new mongoose.Schema({
   python: {
     type: Number,
     default: 0,
+  }, //add more fields here and chang the values in the function
+  sql: {
+    type: Number,
+    default: 0,
   },
 });
 

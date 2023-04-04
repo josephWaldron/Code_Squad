@@ -9,7 +9,30 @@ app.use(cors());
 
 const connectionData = require("./connect.json");
 
-mongoose.connect(connectionData.mongodb_connection.uri);
+mongoose
+  .connect(connectionData.mongodb_connection.uri)
+  .then(async () => {
+    console.log("Connected to MongoDB");
+
+    // Add fields to existing users
+    try {
+      await addFieldToExistingUsers("sql", 0);
+      console.log("SQL field added to existing users");
+    } catch (err) {
+      console.error("Error adding fields:", err);
+    }
+  })
+  .catch((err) => console.error("Error connecting to MongoDB:", err));
+
+async function addFieldToExistingUsers(fieldName, defaultValue) {
+  const filter = {};
+  filter[fieldName] = { $exists: false };
+
+  const update = { $set: {} };
+  update.$set[fieldName] = defaultValue;
+
+  await UserModel.updateMany(filter, update, { upsert: false });
+}
 
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;

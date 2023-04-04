@@ -17,19 +17,8 @@ const questions: Question[] = [
   },
   {
     id: 2,
-    type: 1, //multiple choice 0 , checks 1
-    question: "Which part of the code is incorrect?",
-    codeBlock: "NONE",
-    answers: [
-      { id: 0, text: "char needs to be in single quotes", correct: true },
-      { id: 1, text: "Missing semicolon", correct: false },
-      { id: 2, text: "None of the above", correct: true },
-    ],
-  },
-  {
-    id: 3,
     type: 0, //multiple choice 0 , checks 1
-    question: "Which of the following is not a primitive data type?",
+    question: "Which part of the code is incorrect?",
     codeBlock: 'char x = "a";',
     answers: [
       { id: 0, text: "char needs to be in single quotes", correct: true },
@@ -38,42 +27,226 @@ const questions: Question[] = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     type: 0, //multiple choice 0 , checks 1
     question: "How to initialize an integer variable?",
     codeBlock: "ANSWER",
     answers: [
-      { id: 0, text: "int x = 10;", correct: true },
-      { id: 1, text: "int x = 10.5;", correct: false },
-      { id: 2, text: "int x = 10.5f;", correct: false },
-      { id: 3, text: "int x=12.3;", correct: false },
+      { id: 0, text: "int x = 10", correct: true },
+      { id: 1, text: "int x = 10.5", correct: false },
+      { id: 2, text: "int x = 10.5f", correct: false },
+      { id: 3, text: "int x = 10.5d", correct: false },
+    ],
+  },
+  {
+    id: 4,
+    type: 0, //multiple choice 0 , checks 1
+    question: "This data type allows for the storage of characters or letters ",
+    codeBlock: "NONE",
+    answers: [
+      { id: 0, text: "Float", correct: false },
+      { id: 1, text: "Boolean", correct: false },
+      { id: 2, text: "Char", correct: true },
+      { id: 3, text: "String", correct: false },
     ],
   },
   {
     id: 5,
-    type: 1, //multiple choice 0 , checks 1
-    question: "Which of the following is not a valid variable name?",
-    codeBlock: "ANSWER",
+    type: 0, //multiple choice 0 , checks 1
+    question:
+      "This data type is a 32-bit integer that is typically used as a default value for integral values. ",
+    codeBlock: "NONE",
     answers: [
-      { id: 0, text: "int x = 10;", correct: true },
-      { id: 1, text: "int x = 10.5;", correct: false },
-      { id: 2, text: "int x = 10.5f;", correct: false },
-      { id: 3, text: "int x;", correct: true },
+      { id: 0, text: "Double", correct: false },
+      { id: 1, text: "Float", correct: false },
+      { id: 2, text: "Int", correct: true },
+      { id: 3, text: "Short", correct: false },
     ],
   },
   {
     id: 6,
-    type: 1, //multiple choice 0 , checks 1
-    question: "What does this code accomplish?",
-    codeBlock: "int x = 10;",
+    type: 0, //multiple choice 0 , checks 1
+    question:
+      "This data type is used to contain integer numbers that are too large to fit in the Int data type. ",
+    codeBlock: "NONE",
     answers: [
-      { id: 0, text: "Declares a variable x of type int", correct: true },
-      { id: 1, text: "Declares a variable x of type float", correct: false },
-      { id: 2, text: "Declares a variable x of type double", correct: false },
-      { id: 3, text: "Declares a variable x of type int", correct: true },
+      { id: 0, text: "Double", correct: false },
+      { id: 1, text: "Float", correct: false },
+      { id: 2, text: "Long", correct: true },
+      { id: 3, text: "Byte", correct: false },
+    ],
+  },
+  {
+    id: 7,
+    type: 0, //multiple choice 0 , checks 1
+    question:
+      "Which of the following data types contains 4 bytes and can be used to store currency values?",
+    codeBlock: "NONE",
+    answers: [
+      { id: 0, text: "Double", correct: true },
+      { id: 1, text: "Float", correct: false },
+      { id: 2, text: "Int", correct: false },
+      { id: 3, text: "Short", correct: false },
+    ],
+  },
+  {
+    id: 8,
+    type: 0, //multiple choice 0 , checks 1
+    question:
+      "This data type can store up to 15 decimal places and is typically used for fractional numbers.",
+    codeBlock: "NONE",
+    answers: [
+      { id: 0, text: "Double", correct: false },
+      { id: 1, text: "Float", correct: false },
+      { id: 2, text: "Long", correct: true },
+      { id: 3, text: "Boolean", correct: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 9,
+    codeBlock: "NONE",
+    type: 0,
+    question:
+      "True or False : A string data type is a non-primitive data type.",
+    answers: [
+      { id: 0, text: "True", correct: true },
+      { id: 1, text: "False", correct: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 10,
+    codeBlock: "NONE",
+    type: 0,
+    question: "Which of the following data types can be used to store text? ",
+    answers: [
+      { id: 0, text: "Array", correct: false },
+      { id: 1, text: "String", correct: true },
+      { id: 2, text: "Boolean", correct: false },
+      { id: 3, text: "Float", correct: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 11,
+    codeBlock: "NONE",
+    type: 0,
+    question: "What is a string data type in Java? ",
+    answers: [
+      {
+        id: 0,
+        text: "Generally used as a default data type for integral values",
+        correct: false,
+      },
+      {
+        id: 1,
+        text: "Used to store collections of data, such as lists or tables",
+        correct: false,
+      },
+      { id: 2, text: "Unicode character", correct: false },
+      {
+        id: 3,
+        text: "Used to represent a sequence of characters",
+        correct: true,
+      },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 12,
+    codeBlock: "NONE",
+    type: 0,
+    question: "What is an array data type in Java? ",
+    answers: [
+      {
+        id: 0,
+        text: "Used to represent true or false values",
+        correct: false,
+      },
+      {
+        id: 1,
+        text: "Used to store collections of data, such as lists or tables",
+        correct: true,
+      },
+      { id: 2, text: "Used to store a single character", correct: false },
+      {
+        id: 3,
+        text: "Used to represent a sequence of characters",
+        correct: false,
+      },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 13,
+    codeBlock: "NONE",
+    type: 0,
+    question: "How is a double data type different from a Float data type? ",
+    answers: [
+      {
+        id: 0,
+        text: "Double data type stores up to 16 decimal places while float stores up to 7",
+        correct: false,
+      },
+      { id: 1, text: "There is no difference", correct: false },
+      {
+        id: 2,
+        text: "Float stores decimal values with single precision, while double stores values with double precision",
+        correct: false,
+      },
+      { id: 3, text: "A and C", correct: true },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 14,
+    codeBlock: "NONE",
+    type: 1,
+    question:
+      "Which of the following are primitive data types in Java? (more than one answer)? ",
+    answers: [
+      { id: 0, text: "String", correct: false },
+      { id: 1, text: "Int", correct: true },
+      { id: 2, text: "Array", correct: false },
+      { id: 3, text: "Float", correct: true },
+      { id: 4, text: "Double", correct: true },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 15,
+    codeBlock: "NONE",
+    type: 1,
+    question:
+      "Which of the following are non-primitive data types in Java? (more than one answer)? ",
+    answers: [
+      { id: 0, text: "String", correct: true },
+      { id: 1, text: "Int", correct: false },
+      { id: 2, text: "Array", correct: true },
+      { id: 3, text: "Float", correct: false },
+      { id: 4, text: "Long", correct: false },
+      { id: 4, text: "Char", correct: false },
     ],
   },
 ];
+
+//shuffle questions
+function getRandom(): number {
+  return Math.random() - 0.5;
+}
+
+const shuffledQuestions = questions.sort(getRandom).map((question) => {
+  const shuffledAnswers = question.answers.sort(getRandom);
+  return { ...question, answers: shuffledAnswers };
+});
 
 const Java_1 = () => {
   return (
@@ -100,28 +273,28 @@ const Java_1 = () => {
             {/* dont do copy blocks here */}
             <CodeBlock
               showLineNumbers={false}
-              text="boolean x = true;"
+              text="boolean x = true"
               language="java"
               theme={a11yDark}
             />
             <li>Byte- ranges from -127 to 128</li>
             <CodeBlock
               showLineNumbers={false}
-              text="byte x = 100;"
+              text="byte x = 100"
               language="java"
               theme={a11yDark}
             />
             <li>Char- unicode character</li>
             <CodeBlock
               showLineNumbers={false}
-              text="char x = 'a';"
+              text="char x = 'a'"
               language="java"
               theme={a11yDark}
             />
             <li>Short- 2 times smaller than an integer.</li>
             <CodeBlock
               showLineNumbers={false}
-              text="short x = 1000;"
+              text="short x = 1000"
               language="java"
               theme={a11yDark}
             />
@@ -131,7 +304,7 @@ const Java_1 = () => {
             </li>
             <CodeBlock
               showLineNumbers={false}
-              text="int x = 10000;"
+              text="int x = 10000"
               language="java"
               theme={a11yDark}
             />
@@ -141,7 +314,7 @@ const Java_1 = () => {
             </li>
             <CodeBlock
               showLineNumbers={false}
-              text="long x = 100000;"
+              text="long x = 100000"
               language="java"
               theme={a11yDark}
             />
@@ -151,7 +324,7 @@ const Java_1 = () => {
             </li>
             <CodeBlock
               showLineNumbers={false}
-              text="float x = 10.5f;"
+              text="float x = 10.5f"
               language="java"
               theme={a11yDark}
             />
@@ -161,7 +334,7 @@ const Java_1 = () => {
             </li>
             <CodeBlock
               showLineNumbers={false}
-              text="double x = 10.5;"
+              text="double x = 10.5"
               language="java"
               theme={a11yDark}
             />
@@ -178,14 +351,18 @@ const Java_1 = () => {
             <li>Array- used to store collections of data</li>
             <CodeBlock
               showLineNumbers={false}
-              text="int[] x = {1,2,3};"
+              text="int[] x = {1,2,3}"
               language="java"
               theme={a11yDark}
             />
           </ul>
         </Col>
         <Col>
-          <Questions questions={questions} course={"Java"} lessonId={1} />
+          <Questions
+            questions={shuffledQuestions}
+            course={"Java"}
+            lessonId={1}
+          />
         </Col>
       </Row>
     </Container>

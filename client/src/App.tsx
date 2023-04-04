@@ -10,6 +10,8 @@ import Courses from "./components/courses/render/Courses";
 import courses from "./data/courses";
 import DisplayCourse from "./components/courses/render/DisplayCourse";
 import Java_1 from "./components/courses/java/Java_1";
+import Java_2 from "./components/courses/java/Java_2";
+import Java_3 from "./components/courses/java/Java_3";
 
 function App() {
   const courseRoutes = courses.map((course) => (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         {courseRoutes}
         <Route path="/courses/java/lesson1" element={<Java_1 />} />
+        <Route path="/courses/java/lesson2" element={<Java_2 />} />
+        <Route path="/courses/java/lesson3" element={<Java_3 />} />
       </Routes>
     </>
   );

@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import { a11yDark, CodeBlock } from "react-code-blocks";
-import { useHref } from "react-router-dom";
 import updateUserStatus from "../../../hooks/updateUserStatus";
 
 export interface Question {
