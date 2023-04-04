@@ -9,25 +9,45 @@ app.use(cors());
 
 const connectionData = require("./connect.json");
 
-mongoose.connect(connectionData.mongodb_connection.uri);
+mongoose
+  .connect(connectionData.mongodb_connection.uri)
+  .then(async () => {
+    console.log("Connected to MongoDB");
+
+    // Add fields to existing users
+    try {
+      await addFieldToExistingUsers("sql", 0);
+      console.log("SQL field added to existing users");
+    } catch (err) {
+      console.error("Error adding fields:", err);
+    }
+  })
+  .catch((err) => console.error("Error connecting to MongoDB:", err));
+
+async function addFieldToExistingUsers(fieldName, defaultValue) {
+  const filter = {};
+  filter[fieldName] = { $exists: false };
+
+  const update = { $set: {} };
+  update.$set[fieldName] = defaultValue;
+
+  await UserModel.updateMany(filter, update, { upsert: false });
+}
 
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
-
   const user = await UserModel.findOne({ email: email });
   if (!user) {
     res.status(404).send("User not found");
   } else if (user.password !== password) {
     res.status(401).send("Invalid password");
   } else {
-    res.cookie("userId", user._id, { maxAge: 30 * 60 * 1000 }); // Set a cookie that lasts for 30 minutes
     res.json({ success: true, message: "Login successful", userId: user._id });
   }
 });
 
-app.post("/addUser", async (req, res) => {
+app.post("/register", async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
-
   const existingUser = await UserModel.findOne({ email: email });
   if (existingUser) {
     res
@@ -40,30 +60,33 @@ app.post("/addUser", async (req, res) => {
       email: email,
       password: password,
     });
-
-    await newUser.save();
-    res.json({ success: true, message: "Account created successfully." });
+    const savedUser = await newUser.save();
+    res.json({
+      success: true,
+      message: "Account created successfully.",
+      userId: savedUser._id,
+    });
   }
 });
 
 app.get("/user/:id", async (req, res) => {
-  const user = await UserModel.findById(req.params.id);
+  const user = await UserModel.findById(req.params.id).select("-password -__v");
   res.json(user);
 });
 
-//update user
-app.put("/updateJavaStatus/:id/:num", async (req, res) => {
-  const user = await UserModel.findByIdAndUpdate(
-    req.params.id,
+app.put("/update", async (req, res) => {
+  const { userId, course, num } = req.body;
+  const courseLower = course.toLowerCase();
+  await UserModel.findByIdAndUpdate(
+    userId,
     {
       $set: {
-        totalJavaStatus: req.params.num,
+        [courseLower]: num,
       },
     },
     { new: true }
   );
-
-  res.json({ success: true, message: "java ++ completed", user: user });
+  res.json({ success: true, message: `${courseLower} updated` });
 });
 
 app.listen(3001, () => {

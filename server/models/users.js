@@ -19,19 +19,15 @@ const userSchema = new mongoose.Schema({
     required: true,
     min: 5,
   },
-  picturePath: {
-    type: String,
-    default: "",
+  java: {
+    type: Number,
+    default: 0,
   },
-  expert: {
-    type: Boolean,
-    default: false,
-  },
-  conversations: {
-    type: Array,
-    default: [],
-  },
-  totalJavaStatus: {
+  python: {
+    type: Number,
+    default: 0,
+  }, //add more fields here and chang the values in the function
+  sql: {
     type: Number,
     default: 0,
   },
