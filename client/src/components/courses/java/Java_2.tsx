@@ -153,10 +153,10 @@ const questions: Question[] = [
     type: 0,
     question: "Which of the following data types can be used to store text? ",
     answers: [
-      { id: 0, text: "Array;", correct: false },
-      { id: 1, text: "String;", correct: true },
-      { id: 2, text: "Boolean;", correct: false },
-      { id: 3, text: "Float;", correct: false },
+      { id: 0, text: "Array", correct: false },
+      { id: 1, text: "String", correct: true },
+      { id: 2, text: "Boolean", correct: false },
+      { id: 3, text: "Float", correct: false },
     ],
   },
   {
@@ -347,10 +347,10 @@ const Java_2 = () => {
             <CopyBlock
               showLineNumbers={false}
               text='class HelloWorld {
-    public static void main(String args[]){
-        //A System.out.println statement is used to print the string "Hello World"
-        System.out.println("Hello World");
-    }
+  public static void main(String args[]){
+    //A System.out.println statement is used to print the string "Hello World"
+    System.out.println("Hello World");
+  }
 }'
               language="java"
               theme={a11yDark}
