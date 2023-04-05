@@ -11,18 +11,18 @@ const connectionData = require("./connect.json");
 
 mongoose
   .connect(connectionData.mongodb_connection.uri)
-  .then(async () => {
-    console.log("Connected to MongoDB");
+  // .then(async () => {
+  //   console.log("Connected to MongoDB");
 
-    // Add fields to existing users
-    try {
-      await addFieldToExistingUsers("sql", 0);
-      console.log("SQL field added to existing users");
-    } catch (err) {
-      console.error("Error adding fields:", err);
-    }
-  })
-  .catch((err) => console.error("Error connecting to MongoDB:", err));
+  //   // Add fields to existing users
+  //   try {
+  //     await addFieldToExistingUsers("sql", 0);
+  //     console.log("SQL field added to existing users");
+  //   } catch (err) {
+  //     console.error("Error adding fields:", err);
+  //   }
+  // })
+  // .catch((err) => console.error("Error connecting to MongoDB:", err));
 
 async function addFieldToExistingUsers(fieldName, defaultValue) {
   const filter = {};
