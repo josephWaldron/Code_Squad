@@ -8,7 +8,7 @@ const N = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <img src="/src/assets/logo.png" alt="logo" width="60" height="60" />
+        <img src="logo.png" alt="logo" width="60" height="60" />
         <Navbar.Brand href="/">CodeSquad</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
