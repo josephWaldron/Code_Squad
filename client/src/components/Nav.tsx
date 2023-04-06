@@ -1,7 +1,6 @@
 import Cookies from "js-cookie";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import courses from "../data/courses";
-import logo from "../images/logo.png";
 
 const N = () => {
   const isLoggedIn =
@@ -9,7 +8,7 @@ const N = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <img src={logo} alt="logo" width="60" height="60" />
+        <img src="./images/logo.png" alt="logo" width="60" height="60" />
         <Navbar.Brand href="/">CodeSquad</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
