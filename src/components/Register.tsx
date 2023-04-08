@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 import { Alert, Button, Card, Form } from "react-bootstrap";
 import backendClient from "../services/backend-client";
 import axios from "axios";
+
 interface newUser {
   success: boolean;
   message: string;
@@ -45,15 +46,15 @@ const Register = () => {
   return (
     <>
       {errorMessage && (
-        <Alert key="danger" variant="danger">
+        <Alert key="danger" variant="danger" className="mb-3">
           {errorMessage}
         </Alert>
       )}
-      <Card bg={"dark"}>
+      <Card bg={"dark"} className="p-5">
         <Form onSubmit={handleSubmit}>
-          <h1>Sign Up</h1>
+          <h1 className="text-white mb-4">Sign Up</h1>
           <Form.Group className="mb-3" controlId="firstName">
-            <Form.Label>First Name</Form.Label>
+            <Form.Label className="text-white">First Name</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter First Name"
@@ -63,7 +64,7 @@ const Register = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="lastName">
-            <Form.Label>Last Name</Form.Label>
+            <Form.Label className="text-white">Last Name</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter Last Name"
@@ -73,7 +74,7 @@ const Register = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="email">
-            <Form.Label>Email</Form.Label>
+            <Form.Label className="text-white">Email</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email"
@@ -83,7 +84,7 @@ const Register = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="text-white">Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter password"
@@ -93,7 +94,7 @@ const Register = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="confirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
+            <Form.Label className="text-white">Confirm Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Confirm password"
