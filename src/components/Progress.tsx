@@ -18,8 +18,11 @@ const Progress = ({ course }: Props) => {
     <>
       <h1>Progress for {course.name}</h1>
       {/* change variants for different colors */}
-      <ProgressBar now={progressPercentage} label={course.name} variant="" />
-      <h3>{progressPercentage.toFixed(2)}%</h3>
+      <ProgressBar
+        now={progressPercentage}
+        label={`${progressPercentage.toFixed(2)}%`}
+        variant="success"
+      />
     </>
   );
 };

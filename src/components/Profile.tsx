@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import { Alert, Button } from "react-bootstrap";
+import { Alert, Button, Container, Row, Col } from "react-bootstrap";
 import getUser from "../hooks/getUser";
 import ProgressBar from "./Progress";
 import courses from "../data/courses";
@@ -23,33 +23,42 @@ const Profile = () => {
     window.location.href = "/";
   };
   return (
-    <>
-      {justIn && (
-        <Alert variant="success">
-          You have successfully logged in. Welcome!
-        </Alert>
-      )}
-      {user && (
-        <h1>
-          Welcome {user.firstName} {user.lastName}!
-        </h1>
-      )}
-      {error && <p>Error: {error}</p>}
-      {courses.map((course) => {
-        if (course.complete) {
-          return (
-            <React.Fragment key={course.id}>
-              <ProgressBar course={course} />
-              <Button href={`/courses/${course.name.toLowerCase()}`}>
-                Continue {course.name}
-              </Button>
-            </React.Fragment>
-          );
-        }
-      })}
-
-      <Button onClick={handleLogout}>Log Out</Button>
-    </>
+    <Container>
+      <Row>
+        <Col>
+          {justIn && (
+            <Alert variant="success">
+              You have successfully logged in. Welcome!
+            </Alert>
+          )}
+          {user && (
+            <h1>
+              Welcome {user.firstName} {user.lastName}!
+            </h1>
+          )}
+          {error && <p>Error: {error}</p>}
+          {courses.map((course) => {
+            if (course.complete) {
+              return (
+                <React.Fragment key={course.id}>
+                  <ProgressBar course={course} />
+                  <Button href={`/courses/${course.name.toLowerCase()}`}>
+                    Continue {course.name}
+                  </Button>
+                </React.Fragment>
+              );
+            }
+          })}
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Button variant="danger" onClick={handleLogout}>
+            Log Out
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
