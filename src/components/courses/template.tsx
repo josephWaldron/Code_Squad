@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { a11yDark, CodeBlock } from "react-code-blocks";
-import Questions, { Question } from "./render/Questions";
+import Questions, { Question } from "./render/Questions"; //add another . if its not working
 
 const questions: Question[] = [
   {

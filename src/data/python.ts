@@ -1,18 +1,18 @@
 export default [
   {
     id: 1,
-    description: "Learn the basics of Python",
+    description: "Introduction to Python",
   },
   {
     id: 2,
-    description: "Learn about Python data types",
+    description: "Python Data Types and Variables",
   },
   {
     id: 3,
-    description: "Learn about Python data types",
+    description: "Basic Arithmetic Operators in Python",
   },
   {
     id: 4,
-    description: "Learn about Python data types",
+    description: "Conditional Statements",
   },
 ];
