@@ -1,6 +1,7 @@
 import Cookies from "js-cookie";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import courses from "../data/courses";
+import logo from "../assets/logo.png";
 
 const N = () => {
   const isLoggedIn =
@@ -10,7 +11,7 @@ const N = () => {
       <Container>
         <Navbar.Brand href="/">
           <img
-            src="/src/assets/logo.png"
+            src={logo}
             alt="logo"
             width="60"
             height="60"
