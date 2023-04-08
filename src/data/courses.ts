@@ -19,7 +19,7 @@ export default [
     id: 2,
     name: "Python",
     img: pythonIMG,
-    complete: false,
+    complete: true,
     lessons: pythonLessons,
   },
   {
