@@ -14,6 +14,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
     try {
@@ -37,6 +38,7 @@ const Login = () => {
       }
     }
   };
+
   return (
     <>
       {error && (
@@ -44,12 +46,13 @@ const Login = () => {
           {error}
         </Alert>
       )}
+
       <Card className="bg-dark text-light">
         <Card.Body>
           <Card.Title>Login</Card.Title>
           <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="email">
-              <Form.Label>Email</Form.Label>
+            <Form.Group controlId="email">
+              <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter email"
@@ -58,7 +61,8 @@ const Login = () => {
                 required
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="password">
+
+            <Form.Group controlId="password">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
@@ -68,16 +72,20 @@ const Login = () => {
                 required
               />
             </Form.Group>
+
             <Button variant="primary" type="submit">
               Login
             </Button>
           </Form>
         </Card.Body>
+
         <Card.Footer className="text-center">
-          <span>Don't have an account? </span>
-          <Button variant="primary" href="/register">
-            Register
-          </Button>
+          <div>
+            Don't have an account?
+            <Button variant="link" href="/register">
+              Register
+            </Button>
+          </div>
         </Card.Footer>
       </Card>
     </>
