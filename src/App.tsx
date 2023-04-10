@@ -46,6 +46,7 @@ function App() {
         <Route path="/courses/java/lesson4" element={<Java_4 />} />
         {/* <Route path="/courses/template" element={<Template />} /> */}
         <Route path="/courses/sql/lesson1" element={<SQL_1 />} />
+        <Route path="/courses/html/lesson1" element={<Html_1 />} />
 
         <Route path="/courses/python/lesson1" element={<Python_1 />} />
         <Route path="/courses/python/lesson2" element={<Python_2 />} />

@@ -35,7 +35,7 @@ export default [
     id: 4,
     name: "Html",
     img: htmlIMG,
-    complete: false,
+    complete: true,
     lessons: htmlLessons,
   },
 ];
