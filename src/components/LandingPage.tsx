@@ -1,12 +1,15 @@
 import Cookies from "js-cookie";
 import { Alert, Button, Container } from "react-bootstrap";
 import { Carousel } from "react-bootstrap";
+//imports for images
+import hero1 from "../assets/hero1.png";
+import hero2 from "../assets/hero2.jpg";
+import hero3 from "../assets/hero3.jpg";
 
 const LandingPage = () => {
   const isLoggedIn =
     Cookies.get("hash") !== undefined && Cookies.get("hash") !== "";
-  const justOut =
-    Cookies.get("new") !== undefined && Cookies.get("new") !== "";
+  const justOut = Cookies.get("new") !== undefined && Cookies.get("new") !== "";
 
   return (
     <Container className="text-center">
@@ -26,13 +29,13 @@ const LandingPage = () => {
       </Container>
       <Carousel fade className="my-5">
         <Carousel.Item>
-          <img className="d-block w-100" src="/src/assets/hero1.png" alt="First slide" />
+          <img className="d-block w-100" src={hero1} alt="First slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src="/src/assets/hero2.jpg" alt="Second slide" />
+          <img className="d-block w-100" src={hero2} alt="Second slide" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src="/src/assets/hero3.jpg" alt="Third slide" />
+          <img className="d-block w-100" src={hero3} alt="Third slide" />
         </Carousel.Item>
       </Carousel>
       <div className="my-5">
