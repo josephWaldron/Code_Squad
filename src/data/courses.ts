@@ -28,7 +28,7 @@ export default [
     id: 3,
     name: "SQL",
     img: sqlIMG,
-    complete: true,
+    complete: false,
     lessons: SQLLessons,
   },
   {

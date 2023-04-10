@@ -15,7 +15,7 @@ const Progress = ({ course }: Props) => {
   const { progress, lessons } = getProgress(course, user);
   const progressPercentage = (Number(progress) / lessons) * 100;
   return (
-    <Card style={{ width: "18rem", margin: "1rem auto" }}>
+    <Card style={{ width: "18rem", margin: "1rem auto" }} className="bg-dark">
       <Card.Body>
         <Card.Title>Progress for {course.name}</Card.Title>
         <ProgressBar
