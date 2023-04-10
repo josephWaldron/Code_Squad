@@ -24,7 +24,7 @@ const Profile = () => {
   };
   return (
     <Container>
-      <Card className="my-4">
+      <Card className="my-4 bg-dark">
         <Card.Header>
           <h3>Profile</h3>
         </Card.Header>
