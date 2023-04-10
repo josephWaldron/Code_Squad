@@ -233,7 +233,7 @@ const questions: Question[] = [
       { id: 2, text: "Array", correct: true },
       { id: 3, text: "Float", correct: false },
       { id: 4, text: "Long", correct: false },
-      { id: 4, text: "Char", correct: false },
+      { id: 5, text: "Char", correct: false },
     ],
   },
 ];

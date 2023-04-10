@@ -10,8 +10,8 @@ const questions: Question[] = [
     question:
       "True or False: Parenthesis () are the syntax used to store the condition in which the if-statement will be run off of.",
     answers: [
-      { id: 0, text: "True.", correct: true },
-      { id: 1, text: "False.", correct: false },
+      { id: 0, text: "True", correct: true },
+      { id: 1, text: "False", correct: false },
     ],
   },
   {
@@ -97,12 +97,12 @@ const questions: Question[] = [
     answers: [
       {
         id: 0,
-        text: "To repeat a block of code multipe times",
+        text: "To repeat a block of code multiple times",
         correct: false,
       },
       {
         id: 1,
-        text: "To exeucte a block of code only if a certain condition is true",
+        text: "To execute a block of code only if a certain condition is true",
         correct: false,
       },
       {
