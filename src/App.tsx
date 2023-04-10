@@ -19,6 +19,7 @@ import Python_1 from "./components/courses/python/Python_1";
 import Python_2 from "./components/courses/python/Python_2";
 import Python_3 from "./components/courses/python/Python_3";
 import Python_4 from "./components/courses/python/Python_4";
+import Html_1 from "./components/courses/html/Html_1";
 
 function App() {
   const courseRoutes = courses.map((course) => (
