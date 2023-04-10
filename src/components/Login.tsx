@@ -47,7 +47,7 @@ const Login = () => {
         </Alert>
       )}
 
-      <Card className="bg-dark text-light">
+      <Card className="bg-dark text-light col-md-4 mx-auto">
         <Card.Body>
           <Card.Title>Login</Card.Title>
           <Form onSubmit={handleSubmit}>
@@ -62,7 +62,7 @@ const Login = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="password">
+            <Form.Group controlId="password" >
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
@@ -73,7 +73,7 @@ const Login = () => {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" className=" mt-3 mx-auto d-block " >
               Login
             </Button>
           </Form>

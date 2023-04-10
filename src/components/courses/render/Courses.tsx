@@ -15,7 +15,7 @@ const Courses = () => {
     <div>
       {courses.map((course, index) => {
         return (
-          <Card bg={"dark"} key={index}>
+          <Card key={index} className="bg-dark text-light col-md-4 mx-auto">
             <h1> {course.name}</h1>
             <img
               key={index}

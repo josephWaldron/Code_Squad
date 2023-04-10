@@ -86,7 +86,7 @@ const shuffledQuestions = questions.sort(getRandom).map((question) => {
 
 const Template = () => {
   return (
-    <Container fluid>
+    <Container fluid >
       <Row>
         <Col>
           <h2>Who created Java?</h2>
