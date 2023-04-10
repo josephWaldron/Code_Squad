@@ -8,10 +8,10 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "True or False: Parenthesis () are the syntax used to store the condition in which the if-statement will be run off of.",
+      "True or False: Parenthesis () are the syntax used to store the condition in which the if-statement will be run off of",
     answers: [
-      { id: 0, text: "True.", correct: true },
-      { id: 1, text: "False.", correct: false },
+      { id: 0, text: "True", correct: true },
+      { id: 1, text: "False", correct: false },
     ],
   },
   {
@@ -32,7 +32,7 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "True or False : Else conditions can be used to specify a block of code to be executed if a condition is false.",
+      "True or False : Else conditions can be used to specify a block of code to be executed if a condition is false",
     answers: [
       { id: 0, text: "True", correct: true },
       { id: 1, text: "False", correct: false },
@@ -42,7 +42,7 @@ const questions: Question[] = [
     id: 4,
     codeBlock: "NONE",
     type: 0,
-    question: "A user can check multiple conditions using the __ statement.",
+    question: "A user can check multiple conditions using the __ statement",
     answers: [
       { id: 0, text: "Else", correct: false },
       { id: 1, text: "Else-if", correct: true },
@@ -55,7 +55,7 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "There can be multiple __ statements in a single conditional statement.",
+      "There can be multiple __ statements in a single conditional statement",
     answers: [
       { id: 0, text: "Else-if", correct: true },
       { id: 1, text: "Else", correct: false },
@@ -188,7 +188,7 @@ const Java_4 = () => {
             {/* dont do copy blocks here */}
             <CodeBlock
               showLineNumbers={false}
-              text="int value = 10;
+              text="int value = 10
 if (value >0) {
   //code to be executed
 }"
@@ -198,7 +198,7 @@ if (value >0) {
             <li>Else Statements</li>
             <CodeBlock
               showLineNumbers={false}
-              text="int value = 10;
+              text="int value = 10
 if (value >0) { 
   //code to be executed
 }
@@ -211,7 +211,7 @@ else {
             <li>Else-if Statements</li>
             <CodeBlock
               showLineNumbers={false}
-              text="int value = 10;
+              text="int value = 10
 if (value < 0) {
   //code to be executed
 }

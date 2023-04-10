@@ -1,5 +1,6 @@
 import javaLessons from "./java";
 import pythonLessons from "./python";
+import htmlLessons from "./htmlCourse";
 
 export default [
   {
@@ -15,5 +16,12 @@ export default [
     img: "../src/assets/python.png",
     complete: false,
     lessons: pythonLessons,
+  },
+  {
+    id: 3,
+    name: "Html",
+    img: "../src/assets/python.png",
+    complete: false,
+    lessons: htmlLessons,
   },
 ];
