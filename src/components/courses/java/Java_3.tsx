@@ -9,10 +9,10 @@ const questions: Question[] = [
     type: 0,
     question: "What is an array in programming?",
     answers: [
-      { id: 0, text: "A group of variables.", correct: false },
-      { id: 1, text: "A group of data of the same type.", correct: true },
-      { id: 2, text: "A group of functions.", correct: false },
-      { id: 3, text: "A group of objects.", correct: false },
+      { id: 0, text: "A group of variables", correct: false },
+      { id: 1, text: "A group of data of the same type", correct: true },
+      { id: 2, text: "A group of functions", correct: false },
+      { id: 3, text: "A group of objects", correct: false },
     ],
   },
   {
@@ -22,10 +22,10 @@ const questions: Question[] = [
     question:
       "Which of the following is the correct way to declare a 1D integer array in Java?",
     answers: [
-      { id: 0, text: "int[] array = new int[5];.", correct: true },
-      { id: 1, text: "int array [] = new int[5];.", correct: false },
-      { id: 2, text: "int array = new int[5];.", correct: false },
-      { id: 3, text: "array int[] = new int[5];.", correct: false },
+      { id: 0, text: "int[] array = new int[5]", correct: true },
+      { id: 1, text: "int array [] = new int[5]", correct: false },
+      { id: 2, text: "int array = new int[5]", correct: false },
+      { id: 3, text: "array int[] = new int[5]", correct: false },
     ],
   },
   {
@@ -33,12 +33,12 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "What is the index of the first element in the first row of a 2D array in Java?;",
+      "What is the index of the first element in the first row of a 2D array in Java?",
     answers: [
-      { id: 0, text: "0;.", correct: true },
-      { id: 1, text: "1;.", correct: false },
-      { id: 2, text: "-1;.", correct: false },
-      { id: 3, text: "None of the above;.", correct: false },
+      { id: 0, text: "0", correct: true },
+      { id: 1, text: "1", correct: false },
+      { id: 2, text: "-1", correct: false },
+      { id: 3, text: "None of the above", correct: false },
     ],
   },
   {
@@ -46,12 +46,12 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "Which of the following is the correct way to declare a 2D array in Java?;",
+      "Which of the following is the correct way to declare a 2D array in Java?",
     answers: [
-      { id: 0, text: "int[][] array = new int[5][5];.", correct: true },
-      { id: 1, text: "int[] array = new int[5, 5];.", correct: false },
-      { id: 2, text: "int[][] array = new int(5)(5);.", correct: false },
-      { id: 3, text: "int array[][] = new int[5][5];.", correct: false },
+      { id: 0, text: "int[][] array = new int[5][5]", correct: true },
+      { id: 1, text: "int[] array = new int[5, 5]", correct: false },
+      { id: 2, text: "int[][] array = new int(5)(5)", correct: false },
+      { id: 3, text: "int array[][] = new int[5][5]", correct: false },
     ],
   },
   {
@@ -59,26 +59,26 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "Which of the following is the correct way to loop through a 1D array in Java?;",
+      "Which of the following is the correct way to loop through a 1D array in Java?",
     answers: [
       {
         id: 0,
-        text: "for (int i = 0; i < array.size(); i++);.",
+        text: "for (int i = 0; i < array.size(); i++)",
         correct: false,
       },
       {
         id: 1,
-        text: "for (int i = 0; i < array.length; i++);.",
+        text: "for (int i = 0; i < array.length; i++)",
         correct: true,
       },
       {
         id: 2,
-        text: "for (int i = 1; i < array.length(); i++);.",
+        text: "for (int i = 1; i < array.length(); i++)",
         correct: false,
       },
       {
         id: 3,
-        text: "for (int i = 1; i <= array.length; i++);.",
+        text: "for (int i = 1; i <= array.length; i++)",
         correct: false,
       },
     ],
@@ -88,26 +88,26 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "Which of the following is the correct way to loop through a 2D array in Java?;",
+      "Which of the following is the correct way to loop through a 2D array in Java?",
     answers: [
       {
         id: 0,
-        text: "for (int i = 0; i < array.size(); i++);.",
+        text: "for (int i = 0; i < array.size(); i++)",
         correct: false,
       },
       {
         id: 1,
-        text: "for (int i = 0; i < array.length; i++);.",
+        text: "for (int i = 0; i < array.length; i++)",
         correct: false,
       },
       {
         id: 2,
-        text: "for (int i = 0; i < array.length; i++) { for (int j = 0; j < array[i].length; j++) };.",
+        text: "for (int i = 0; i < array.length; i++) { for (int j = 0; j < array[i].length; j++) }",
         correct: true,
       },
       {
         id: 3,
-        text: "for (int i = 1; i <= array.length; i++);.",
+        text: "for (int i = 1; i <= array.length; i++)",
         correct: false,
       },
     ],
@@ -115,42 +115,43 @@ const questions: Question[] = [
   {
     // Fix this one with the code question
     id: 6,
-    codeBlock:
-      "int[][] array = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}} \nSystem.out.println(array[1][2])",
+    codeBlock: `int[][] array = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+System.out.println(array[1][2])`,
     type: 0,
-    question: "What is the output of the following code?;",
+    question: "What is the output of the following code?",
     answers: [
-      { id: 0, text: "1;.", correct: false },
-      { id: 1, text: "2;.", correct: false },
-      { id: 2, text: "3;.", correct: false },
-      { id: 3, text: "6;.", correct: true },
+      { id: 0, text: "1", correct: false },
+      { id: 1, text: "2", correct: false },
+      { id: 2, text: "3", correct: false },
+      { id: 3, text: "6", correct: true },
     ],
   },
   {
     // Fix this one with the code question
     id: 7,
-    codeBlock: "int[] array = {1, 2, 3, 4, 5}; \nSystem.out.println(array[3]);",
+    codeBlock: `int[] array = {1, 2, 3, 4, 5};
+System.out.println(array[3]);`,
     type: 0,
-    question: "What is the output of the following code?;",
+    question: "What is the output of the following code?",
     answers: [
-      { id: 0, text: "1;.", correct: false },
-      { id: 1, text: "2;.", correct: false },
-      { id: 2, text: "3;.", correct: false },
-      { id: 3, text: "4;.", correct: true },
+      { id: 0, text: "1", correct: false },
+      { id: 1, text: "2", correct: false },
+      { id: 2, text: "3", correct: false },
+      { id: 3, text: "4", correct: true },
     ],
   },
   {
     // Fix this one with the code question
     id: 8,
-    codeBlock:
-      "int[] array = {1, 2, 3, 4, 5}; \n System.out.println(array.length);",
+    codeBlock: `int[] array = {1, 2, 3, 4, 5};
+System.out.println(array.length);`,
     type: 0,
     question: "What is the output of the following code?",
     answers: [
-      { id: 0, text: "1;.", correct: false },
-      { id: 1, text: "5;.", correct: true },
-      { id: 2, text: "6;.", correct: false },
-      { id: 3, text: "None of the above;.", correct: false },
+      { id: 0, text: "1", correct: false },
+      { id: 1, text: "5", correct: true },
+      { id: 2, text: "6", correct: false },
+      { id: 3, text: "None of the above", correct: false },
     ],
   },
 ];
