@@ -18,7 +18,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = async (event: { preventDefault: () => void }) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (password !== confirmPassword) {
       setErrorMessage("Passwords do not match");
@@ -50,7 +50,7 @@ const Register = () => {
           {errorMessage}
         </Alert>
       )}
-      <Card bg={"dark"} className="p-5">
+      <Card bg="dark" className="p-5 col-md-4 mx-auto">
         <Form onSubmit={handleSubmit}>
           <h1 className="text-white mb-4">Sign Up</h1>
           <Form.Group className="mb-3" controlId="firstName">
@@ -77,7 +77,7 @@ const Register = () => {
             <Form.Label className="text-white">Email</Form.Label>
             <Form.Control
               type="email"
-              placeholder="Enter email"
+              placeholder="Enter Email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required
@@ -87,7 +87,7 @@ const Register = () => {
             <Form.Label className="text-white">Password</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Enter password"
+              placeholder="Enter Password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
               required
@@ -97,17 +97,18 @@ const Register = () => {
             <Form.Label className="text-white">Confirm Password</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Confirm password"
+              placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(event) => setConfirmPassword(event.target.value)}
               required
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
+
+          <Button variant="primary" type="submit" className="mx-auto d-block mt-3 col-md-3">
             Sign Up!
           </Button>
-          <h3>Or log in</h3>
-          <Button variant="primary" href="/login">
+          <h3 className=" mx-auto text-center">Or log in</h3>
+          <Button variant="primary" href="/login" className="mx-auto d-block mt-3 col-md-3">
             Log In
           </Button>{" "}
         </Form>

@@ -16,12 +16,15 @@ const N = () => {
             width="60"
             height="60"
             className="d-inline-block align-top me-2"
-          />
+          />{" "}
           <span className="h4 mb-0">CodeSquad</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className="justify-content-center"
+        >
+          <Nav className="mx-auto">
             <Nav.Link href="/" className="px-3">
               Home
             </Nav.Link>

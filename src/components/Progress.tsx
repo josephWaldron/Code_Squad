@@ -1,5 +1,5 @@
 import getUser from "../hooks/getUser";
-import { ProgressBar } from "react-bootstrap";
+import { ProgressBar, Card } from "react-bootstrap";
 import { Course } from "./courses/render/Courses";
 import getProgress from "../hooks/getProgress";
 
@@ -15,15 +15,17 @@ const Progress = ({ course }: Props) => {
   const { progress, lessons } = getProgress(course, user);
   const progressPercentage = (Number(progress) / lessons) * 100;
   return (
-    <>
-      <h1>Progress for {course.name}</h1>
-      {/* change variants for different colors */}
-      <ProgressBar
-        now={progressPercentage}
-        label={`${progressPercentage.toFixed(2)}%`}
-        variant="success"
-      />
-    </>
+    <Card style={{ width: "18rem", margin: "1rem auto" }} className="bg-dark">
+      <Card.Body>
+        <Card.Title>Progress for {course.name}</Card.Title>
+        <ProgressBar
+          now={progressPercentage}
+          label={`${progressPercentage.toFixed(2)}%`}
+          striped
+          variant="success"
+        />
+      </Card.Body>
+    </Card>
   );
 };
 
