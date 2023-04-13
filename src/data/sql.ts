@@ -5,6 +5,6 @@ export default [
   },
   {
     id: 2,
-    description: "New lesson",
+    description: "Basic SQL Commands (Continued)",
   },
 ];
