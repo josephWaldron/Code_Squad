@@ -8,99 +8,99 @@ const questions: Question[] = [
     type: 0, //multiple choice 0 , checks 1
     codeBlock: "NONE",
     question:
-      "Which keyword is used to determine which columns of the data to show in the result?",
+      "Which of the following statements is true about SQL?",
     answers: [
-      { id: 0, text: "From", correct: false },
-      { id: 1, text: "Select", correct: true },
-      { id: 2, text: "Create", correct: false },
-      { id: 3, text: "Drop", correct: false },
+      { id: 0, text: "SQL is a programming language used to build websites.", correct: false },
+      { id: 1, text: "SQL is a database management system", correct: false },
+      { id: 2, text: "SQL stands for structured query language", correct: true },
+      { id: 3, text: "SQL is used for creating graphical user interfaces", correct: false },
     ],
   },
   {
     id: 2,
     type: 0, //multiple choice 0 , checks 1
     question:
-      "Which keyword is used to tell the database what table to select from?",
+      "Which of the following SQL statements is used to delete data from a table?",
     codeBlock: "NONE",
     answers: [
-      { id: 0, text: "Add", correct: false },
-      { id: 1, text: "Select", correct: false },
-      { id: 2, text: "From", correct: true },
-      { id: 3, text: "Create", correct: false },
+      { id: 0, text: "SELECT", correct: false },
+      { id: 1, text: "DELETE", correct: true },
+      { id: 2, text: "UPDATE", correct: false },
+      { id: 3, text: "INSERT", correct: false },
     ],
   },
   {
     id: 3,
     type: 0, //multiple choice 0 , checks 1
-    question: "This keyword deletes data from a database.",
+    question: "Which of the following SQL statements is used to join two tables?",
     codeBlock: "NONE",
     answers: [
-      { id: 0, text: "Drop Index", correct: false },
-      { id: 1, text: "Delete", correct: true },
-      { id: 2, text: "Update", correct: false },
-      { id: 3, text: "Add", correct: false },
+      { id: 0, text: "DELETE", correct: false },
+      { id: 1, text: "UNION", correct: true },
+      { id: 2, text: "JOIN", correct: false },
+      { id: 3, text: "SELECT", correct: false },
     ],
   },
   {
     id: 4,
     type: 0, //multiple choice 0 , checks 1
-    question: "This keyword is used to insert new data into a database",
+    question: "Which of the following SQL statements is used to retrieve data from a table?",
     codeBlock: "NONE",
     answers: [
-      { id: 0, text: "Insert Into", correct: true },
-      { id: 1, text: "Create Table", correct: false },
-      { id: 2, text: "Update", correct: false },
-      { id: 3, text: "Select", correct: false },
+      { id: 0, text: "INSERT", correct: false },
+      { id: 1, text: "UPDATE", correct: false },
+      { id: 2, text: "DELETE", correct: false },
+      { id: 3, text: "SELECT", correct: true },
     ],
   },
   {
     id: 5,
     type: 0, //multiple choice 0 , checks 1
-    question: "This command creates a new table in the database.",
+    question: "This command is used to update data within a table",
     codeBlock: "NONE",
     answers: [
-      { id: 0, text: "Create Index", correct: false },
-      { id: 1, text: "Select", correct: false },
-      { id: 2, text: "Create Table", correct: true },
-      { id: 3, text: "Insert", correct: false },
+      { id: 0, text: "CREATE INDEX", correct: false },
+      { id: 1, text: "SELECT", correct: false },
+      { id: 2, text: "UPDATE", correct: true },
+      { id: 3, text: "INSERT", correct: false },
     ],
   },
   {
     id: 6,
     type: 0, //multiple choice 0 , checks 1
     question:
-      "Which of the following commands is used to limit or specify a certain condition?",
+      "Which SQL keyword is used to sort the results of a SELECT statement in ascending order?",
     codeBlock: "NONE",
     answers: [
-      { id: 0, text: "Delete", correct: false },
-      { id: 1, text: "Update", correct: false },
-      { id: 2, text: "Where", correct: true },
-      { id: 3, text: "From", correct: false },
+      { id: 0, text: "ORDER BY", correct: false },
+      { id: 1, text: "ASC", correct: false },
+      { id: 2, text: "DESC", correct: true },
+      { id: 3, text: "SORT BY", correct: false },
     ],
   },
   {
     id: 7,
     type: 0, //multiple choice 0 , checks 1
-    question: "This command is used to update a record within the database.",
+    question: "This command is used to create a table",
     codeBlock: "NONE",
     answers: [
-      { id: 0, text: "Add", correct: false },
-      { id: 1, text: "Drop", correct: false },
-      { id: 2, text: "Update", correct: true },
-      { id: 3, text: "Remove", correct: false },
+      { id: 0, text: "CREATE DATABASE", correct: false },
+      { id: 1, text: "CREATE TABLE", correct: true },
+      { id: 2, text: "CREATE INDEX", correct: false },
+      { id: 3, text: "CREATE VIEW", correct: false },
     ],
   },
   {
     id: 8,
     type: 0, //multiple choice 0 , checks 1
     question:
-      "This command allows a user to filter data so that a limited set of records is returned.",
+      "Which SQL statement is used to modify the structure of a table?",
     codeBlock: "NONE",
     answers: [
-      { id: 0, text: "Having", correct: true },
-      { id: 1, text: "Drop", correct: false },
-      { id: 2, text: "Add", correct: false },
-      { id: 3, text: "Remove", correct: false },
+      { id: 0, text: "ALTER DATABASE", correct: false },
+      { id: 1, text: "ALTER TABLE", correct: false },
+      { id: 2, text: "MODIFY TABLE", correct: true },
+      { id: 3, text: "MODIFY DATABASE", correct: false },
     ],
   },
   {
@@ -110,12 +110,12 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "Which command allows a user to rename a column or table using an alias?",
+      "Which SQL statement is used to add a new column to an existing table?",
     answers: [
-      { id: 0, text: "AS", correct: true },
-      { id: 1, text: "From", correct: false },
-      { id: 2, text: "Group by", correct: false },
-      { id: 3, text: "Where", correct: false },
+      { id: 0, text: "ADD COLUMN", correct: false },
+      { id: 1, text: "INSERT COLUMN", correct: true },
+      { id: 2, text: "CREATE COLUMN", correct: false },
+      { id: 3, text: "MODIFY COLUMN", correct: false },
     ],
   },
   {
@@ -125,12 +125,12 @@ const questions: Question[] = [
     codeBlock: "NONE",
     type: 0,
     question:
-      "This command will count the number of rows and return that count as a column in the result set.",
+      "Which SQL statement is used to order data by descending order?",
     answers: [
-      { id: 0, text: "Add", correct: false },
-      { id: 1, text: "Count", correct: true },
-      { id: 2, text: "From", correct: false },
-      { id: 3, text: "Group by", correct: false },
+      { id: 0, text: "ASC", correct: false },
+      { id: 1, text: "DESC", correct: true },
+      { id: 2, text: "SORT", correct: false },
+      { id: 3, text: "GROUP BY", correct: false },
     ],
   },
 ];
