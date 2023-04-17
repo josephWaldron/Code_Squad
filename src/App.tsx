@@ -15,11 +15,13 @@ import Java_3 from "./components/courses/java/Java_3";
 import Java_4 from "./components/courses/java/Java_4";
 import Template from "./components/courses/template";
 import SQL_1 from "./components/courses/sql/SQL_1";
+import SQL_2 from "./components/courses/sql/SQL_2";
 import Python_1 from "./components/courses/python/Python_1";
 import Python_2 from "./components/courses/python/Python_2";
 import Python_3 from "./components/courses/python/Python_3";
 import Python_4 from "./components/courses/python/Python_4";
 import Html_1 from "./components/courses/html/Html_1";
+
 
 function App() {
   const courseRoutes = courses.map((course) => (
@@ -46,6 +48,7 @@ function App() {
         <Route path="/courses/java/lesson4" element={<Java_4 />} />
         {/* <Route path="/courses/template" element={<Template />} /> */}
         <Route path="/courses/sql/lesson1" element={<SQL_1 />} />
+        <Route path="/courses/sql/lesson2" element={<SQL_2 />} />
 
         <Route path="/courses/python/lesson1" element={<Python_1 />} />
         <Route path="/courses/python/lesson2" element={<Python_2 />} />
