@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import josephImage from "../assets/josephImg.jpg";
+import LiamImage from "../assets/Linked In Pic (liam).jpg"
 
 export const About = () => {
   return (
@@ -89,6 +90,30 @@ export const About = () => {
               >
                 Portfolio
               </Button>
+            </Col>
+          </Row>
+          {/* Copy this and add your own stuff */}
+          <br></br>
+          <br></br>
+          <Row>
+            <Col md>
+              <img
+                width={140}
+                src={LiamImage}
+                alt="Liam"
+                className="img-fluid rounded-circle mb-4"
+              />
+              <h2 className="mb-4">Liam Lidlow</h2>
+            </Col>
+            <Col md>
+              <p className="lead">Computer Science Cyber Security | Kean University</p>
+              <Button
+                variant="success"
+                target="_blank"
+                href="https://www.linkedin.com/in/liam-lidlow-0054a7247/"
+              >
+                Linkedin
+              </Button>{" "}
             </Col>
           </Row>
         </Container>
