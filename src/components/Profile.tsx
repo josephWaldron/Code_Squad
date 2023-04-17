@@ -26,7 +26,20 @@ const Profile = () => {
     <Container>
       <Card className="my-4 bg-dark">
         <Card.Header>
-          <h3>Profile</h3>
+          <Row>
+            <Col>
+              <h3>Profile</h3>
+            </Col>
+            <Col>
+              <Button
+                variant="danger"
+                onClick={handleLogout}
+                className="float-end"
+              >
+                Log Out
+              </Button>
+            </Col>
+          </Row>
         </Card.Header>
         <Card.Body>
           {justIn && (
@@ -45,27 +58,20 @@ const Profile = () => {
               return (
                 <React.Fragment key={course.id}>
                   <ProgressBar course={course} />
-                  <Button
-                    variant="primary"
-                    className="my-2"
-                    href={`/courses/${course.name.toLowerCase()}`}
-                  >
-                    Continue {course.name}
-                  </Button>
+                  <div className="text-center">
+                    <Button
+                      variant="primary"
+                      className="my-2"
+                      href={`/courses/${course.name.toLowerCase()}`}
+                    >
+                      Continue {course.name}
+                    </Button>
+                  </div>
                 </React.Fragment>
               );
             }
           })}
         </Card.Body>
-        <Card.Footer>
-          <Row>
-            <Col>
-              <Button variant="danger" onClick={handleLogout}>
-                Log Out
-              </Button>
-            </Col>
-          </Row>
-        </Card.Footer>
       </Card>
     </Container>
   );
