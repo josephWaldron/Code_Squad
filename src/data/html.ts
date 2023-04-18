@@ -5,7 +5,6 @@ export default [
   },
   {
     id: 2,
-    description: "Coming Soon",
+    description: "Basic HTML commands (Continued)",
   },
-
 ];
