@@ -28,14 +28,14 @@ export default [
     id: 3,
     name: "SQL",
     img: sqlIMG,
-    complete: false,
+    complete: true,
     lessons: SQLLessons,
   },
   {
     id: 4,
     name: "Html",
-    img: htmlIMG,
-    complete: false,
+    img: htmlIMG, 
+    complete: true,
     lessons: htmlLessons,
   },
 ];

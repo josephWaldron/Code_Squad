@@ -6,140 +6,149 @@ const questions: Question[] = [
   {
     id: 1, //Please reference Question interface in Questions.tsx
     type: 0, //multiple choice 0 , checks 1
-    codeBlock: "NONE",
-    question: "What does HTML stand for?",
+    codeBlock: "ANSWER",
+    question: "Which part of an HTML document contains information about the document (title, etc) ?",
     answers: [
-      { id: 0, text: "Hyper Text Markup Language", correct: true },
-      { id: 1, text: "High Tech Markup Language", correct: false },
-      { id: 2, text: "Hyperlinks and Text Markup Language", correct: false },
-      { id: 3, text: "None of the above", correct: false },
+      { id: 0, text: "<head>", correct: true },
+      { id: 1, text: "<body>", correct: false },
+      { id: 2, text: "<title>", correct: false },
+      { id: 3, text: "<footer>", correct: false },
     ],
   },
   {
+    //question with code blocks for answers
+
     id: 2,
-    type: 0, //multiple choice 0 , checks 1
-    question:
-      "An HTML document must start with which declaration at the start of an HTML file?",
     codeBlock: "ANSWER",
+    type: 0,
+    question: "Which tag is used to create a form in HTML?",
     answers: [
-      { id: 0, text: "<!DOCTYPE html>", correct: true },
-      { id: 1, text: "<DOCTYPE html>", correct: false },
-      { id: 2, text: "!DOCTYPE", correct: false },
-      { id: 3, text: "<!HTMLDOCTYPE>", correct: false },
+      { id: 0, text: "<form>", correct: true },
+      { id: 1, text: "<input>", correct: false },
+      { id: 2, text: "<button>", correct: false },
+      { id: 3, text: "<label>", correct: false },
     ],
   },
   {
+    //question with code blocks for answers
+
     id: 3,
-    type: 0, //multiple choice 0 , checks 1
-    question: "Which are the correct tags that are included in an html file?",
     codeBlock: "ANSWER",
+    type: 0,
+    question: "Which tag is used to create a drop-down list in HTML?",
     answers: [
-      {
-        id: 0,
-        text: "<html>, <head></head>, <body></body>, </html> ",
-        correct: true,
-      },
+      { id: 0, text: "<input>", correct: false },
+      { id: 1, text: "<select>", correct: true },
+      { id: 2, text: "<option>", correct: false },
+      { id: 3, text: "<dropdown>", correct: false },
+    ],
+  },
+
+  {
+    //question with code blocks for answers
+
+    id: 4,
+    codeBlock: "ANSWER",
+    type: 0,
+    question: "Which tag is used to add a horizontal line in HTML?",
+    answers: [
+      { id: 0, text: "<br>", correct: false },
+      { id: 1, text: "<hr>", correct: true },
+      { id: 2, text: "<line>", correct: false },
+      { id: 3, text: "<hline>", correct: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 5,
+    codeBlock: "ANSWER",
+    type: 0,
+    question: "Which tag is used to create a heading in HTML?",
+    answers: [
+      { id: 0, text: "<head>", correct: false },
+      { id: 1, text: "<title>", correct: false },
+      { id: 2, text: "<h1>", correct: true },
+      { id: 3, text: "<header>", correct: false },
+    ],
+  },
+  {
+    //question with code blocks for answers
+
+    id: 6,
+    codeBlock: "ANSWER",
+    type: 0,
+    question: "Which tag is used to create a comment in HTML?",
+    answers: [
+      { id: 0, text: "<!--here goes the comment>", correct: true },
       {
         id: 1,
-        text: "<html>, <body></body>, <head></head>, </html> ",
+        text: "<comment>Here goes the comment</comment>",
         correct: false,
       },
-      {
-        id: 2,
-        text: "<head>, <html></html>, <body></body>, </head> ",
-        correct: false,
-      },
-      { id: 3, text: "<head></head>, <body></body> ", correct: false },
+      { id: 2, text: "<cmt>This is a comment</cmt>", correct: false },
+      { id: 3, text: "<cmnt>This is a comment</cmnt>", correct: false },
     ],
   },
   {
-    id: 4,
-    type: 0, //multiple choice 0 , checks 1
-    question: "What is the correct syntax for creating a hyperlink in HTML?",
-    codeBlock: "ANSWER",
-    answers: [
-      { id: 0, text: "<a>www.example.com</a>", correct: false },
-      { id: 1, text: "<a href=></a>", correct: true },
-      { id: 2, text: "<a url=></a>", correct: false },
-      { id: 3, text: "<a>Click Here</a>", correct: false },
-    ],
-  },
-  {
-    id: 5,
-    type: 0, //multiple choice 0 , checks 1
-    question: "which tag is used to create a list with bullet points in HTML ",
-    codeBlock: "ANSWER",
-    answers: [
-      { id: 0, text: "<ol>", correct: false },
-      { id: 1, text: "<li>", correct: false },
-      { id: 2, text: "<ul>", correct: true },
-      { id: 3, text: "<list>", correct: false },
-    ],
-  },
-  {
-    id: 6,
-    type: 0, //multiple choice 0 , checks 1
-    question: "Which tag is used to define a paragraph in HTML ",
-    codeBlock: "ANSWER",
-    answers: [
-      { id: 0, text: "<p>", correct: true },
-      { id: 1, text: "<par>", correct: false },
-      { id: 2, text: "<para>", correct: false },
-      { id: 3, text: "<paragraph>", correct: false },
-    ],
-  },
-  {
+    //question with code blocks for answers
+
     id: 7,
-    type: 0, //multiple choice 0 , checks 1
-    question: "Which tag is used to display an image in HTML?",
     codeBlock: "ANSWER",
+    type: 0,
+    question: "Which tag is used to create a line break in HTML?",
     answers: [
-      { id: 0, text: "<img>", correct: true },
-      { id: 1, text: "<picture>", correct: false },
-      { id: 2, text: "<image>", correct: false },
-      { id: 3, text: "<photo>", correct: false },
+      { id: 0, text: "<br>", correct: true },
+      { id: 1, text: "<lb>", correct: false },
+      { id: 2, text: "<break>", correct: false },
+      { id: 3, text: "<linebreak>", correct: false },
     ],
   },
   {
+    //question with code blocks for answers
+
     id: 8,
-    type: 0, //multiple choice 0 , checks 1
-    question:
-      "Which attribute is used to specify the source URL of an image in HTML?",
-    codeBlock: "NONE",
+    codeBlock: "ANSWER",
+    type: 0,
+    question: "Which tag is used to create a button in HTML?",
     answers: [
-      { id: 0, text: "url", correct: false },
-      { id: 1, text: "source", correct: false },
-      { id: 2, text: "src", correct: true },
-      { id: 3, text: "href", correct: false },
+      { id: 0, text: "<button>", correct: true },
+      { id: 1, text: "<input>", correct: false },
+      { id: 2, text: "<select>", correct: false },
+      { id: 3, text: "<label>", correct: false },
     ],
   },
   {
+    //question with code blocks for answers
+
     id: 9,
-    type: 0, //multiple choice 0 , checks 1
-    question: "Which tag is used to create a table in HTML?",
     codeBlock: "ANSWER",
+    type: 0,
+    question: "Which part of an HTML document contains the content of the page?",
     answers: [
-      { id: 0, text: "<table>", correct: true },
-      { id: 1, text: "<tr>", correct: false },
-      { id: 2, text: "<td>", correct: false },
-      { id: 3, text: "<th>", correct: false },
+      { id: 0, text: "<head>", correct: false },
+      { id: 1, text: "<body>", correct: true },
+      { id: 2, text: "<title>", correct: false },
+      { id: 3, text: "<footer>", correct: false },
     ],
   },
   {
     //question with code blocks for answers
 
     id: 10,
-    codeBlock: "NONE",
+    codeBlock: "ANSWER",
     type: 0,
-    question:
-      "Which attribute is used to define a unique identifier for an HTML element?",
+    question: "Which tag is used to create an ordered list in HTML?",
     answers: [
-      { id: 0, text: "class", correct: false },
-      { id: 1, text: "name", correct: false },
-      { id: 2, text: "id", correct: true },
-      { id: 3, text: "tag", correct: false },
+      { id: 0, text: "<ul>", correct: false },
+      { id: 1, text: "<li>", correct: false },
+      { id: 2, text: "<ol>", correct: true },
+      { id: 3, text: "<dt>", correct: false },
     ],
   },
+
+
+
 ];
 
 //shuffle questions
@@ -152,7 +161,7 @@ const shuffledQuestions = questions.sort(getRandom).map((question) => {
   return { ...question, answers: shuffledAnswers };
 });
 
-const Html_1 = () => {
+const Html_2 = () => {
   return (
     <Container fluid>
       <Row>
@@ -338,7 +347,7 @@ const Html_1 = () => {
           <Questions
             questions={shuffledQuestions}
             course={"Html"}
-            lessonId={1}
+            lessonId={2}
           />
         </Col>
       </Row>
@@ -346,4 +355,4 @@ const Html_1 = () => {
   );
 };
 
-export default Html_1;
+export default Html_2;

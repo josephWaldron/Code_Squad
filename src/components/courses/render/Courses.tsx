@@ -15,28 +15,34 @@ const Courses = () => {
     <div>
       {courses.map((course, index) => {
         return (
-          <Card key={index} className="bg-dark text-light col-md-4 mx-auto">
-            <h1> {course.name}</h1>
-            <img
-              key={index}
-              src={course.img}
-              alt={course.name}
-              width="60"
-              height="60"
-            />
-            {course.complete ? (
-              <Button
-                key={course.id}
-                href={`/courses/${course.name.toLowerCase()}`}
-              >
-                Learn {course.name}!
-              </Button>
-            ) : (
-              <Button variant="danger" disabled>
-                Under Construction 👷
-              </Button>
-            )}
-          </Card>
+          <>
+            <br />
+            <Card key={index} className="bg-dark text-light col-md-4 mx-auto">
+              <div className="text-center">
+                <h1> {course.name}</h1>
+                <img
+                  key={index}
+                  src={course.img}
+                  alt={course.name}
+                  width="60"
+                  height="60"
+                />
+              </div>
+              <br />
+              {course.complete ? (
+                <Button
+                  key={course.id}
+                  href={`/courses/${course.name.toLowerCase()}`}
+                >
+                  Learn {course.name}!
+                </Button>
+              ) : (
+                <Button variant="danger" disabled>
+                  Under Construction 👷
+                </Button>
+              )}
+            </Card>
+          </>
         );
       })}
     </div>
