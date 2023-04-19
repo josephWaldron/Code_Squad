@@ -1,6 +1,8 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import josephImage from "../assets/josephImg.jpg";
 import LiamImage from "../assets/Linked In Pic (liam).jpg"
+import AlexisImage from "../assets/Alexis.jpg";
+
 
 export const About = () => {
   return (
@@ -68,27 +70,27 @@ export const About = () => {
             <Col md>
               <img
                 width={140}
-                src={josephImage}
-                alt="Joseph"
+                src={AlexisImage}
+                alt="Alexis"
                 className="img-fluid rounded-circle mb-4"
               />
-              <h2 className="mb-4">Joseph Waldron</h2>
+              <h2 className="mb-4">Alexis Balbuena</h2>
             </Col>
             <Col md>
-              <p className="lead">Full Stack Engineer | Kean University</p>
+              <p className="lead">Computer Science | Kean University</p>
               <Button
                 variant="success"
                 target="_blank"
-                href="https://github.com/josephWaldron"
+                href="https://www.linkedin.com/in/alexis-balbuena-a497b0252/"
               >
-                Github
+                Linkedin
               </Button>{" "}
               <Button
                 variant="info"
-                href="https://portfolio-site-delta-seven.vercel.app/"
+                href="https://github.com/Alexis2400"
                 target="_blank"
               >
-                Portfolio
+                Github
               </Button>
             </Col>
           </Row>
