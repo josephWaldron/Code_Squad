@@ -1,6 +1,7 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import josephImage from "../assets/josephImg.jpg";
-import LiamImage from "../assets/Linked In Pic (liam).jpg"
+import LiamImage from "../assets/Linked In Pic (liam).jpg";
+import Theodore from "../assets/teddy.jpg";
 
 export const About = () => {
   return (
@@ -114,6 +115,36 @@ export const About = () => {
               >
                 Linkedin
               </Button>{" "}
+            </Col>
+          </Row>
+          <br />
+          {/* Copy this and add your own stuff */}
+          <Row>
+            <Col md>
+              <img
+                width={140}
+                src={Theodore}
+                alt="Joseph"
+                className="img-fluid rounded-circle mb-4"
+              />
+              <h2 className="mb-4">Theodore Awa</h2>
+            </Col>
+            <Col md>
+              <p className="lead">Computer Science Cyber Security | Kean University</p>
+              <Button
+                variant="success"
+                target="_blank"
+                href="https://github.com/teddycybersecurity"
+              >
+                Github
+              </Button>{" "}
+              <Button
+                variant="info"
+                href="https://www.linkedin.com/in/teddy-awa-39921588//"
+                target="_blank"
+              >
+                Linkedin
+              </Button>
             </Col>
           </Row>
         </Container>
