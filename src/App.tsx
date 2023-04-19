@@ -21,6 +21,7 @@ import Python_2 from "./components/courses/python/Python_2";
 import Python_3 from "./components/courses/python/Python_3";
 import Python_4 from "./components/courses/python/Python_4";
 import Html_1 from "./components/courses/html/Html_1";
+import Html_2 from "./components/courses/html/Html_2";
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
         <Route path="/courses/sql/lesson1" element={<SQL_1 />} />
 
         <Route path="/courses/html/lesson1" element={<Html_1 />} />
+        <Route path="/courses/html/lesson2" element={<Html_2 />} />
 
         <Route path="/courses/sql/lesson2" element={<SQL_2 />} />
 
